@@ -230,18 +230,80 @@
 //   }
 
 
+// Arrays
+
+// let fruits = ['Apples'];
+//   fruits.unshift('Banana');
+//   fruits.push('Berries');
+//   console.log(fruits);
+
+// let styles = ['Jazz', 'Bluz'];
+//   styles.push('Rock-n-Roll');
+//   styles[1] = 'Classic';
+//   console.log(styles.shift());
+//   styles.unshift('Rap', 'Raggi');
+//   console.log(styles);
+
+// let arr = ['I', 'study', 'js', 'right', 'now'];
+// let removed = arr.splice(1,2, 'dance');
+//   console.log(removed);
+
+// let arr = ['I', 'study', 'right', 'now'];
+//   arr.splice(2, 0, 'one', 'hard', 'language');
+//   console.log(arr);
+// let arr = [1, 2, 5];
+
+// // начиная с индекса -1 (перед последним элементом)
+// // удалить 0 элементов,
+// // затем вставить числа 3 и 4
+// arr.splice(2, 0, 3, 4);
+
+// alert( arr ); // 1,2,3,4,5
+
+// ['I', 'wanna', 'eat'].forEach((item, index, array) => {
+//   console.log(`${item} has position ${index} in ${array}`);
+// });
+
 
 
 
 // functions
+// ----------------------------------------
+// function addNums(num1, num2) {
+//   console.log(num1 + num2);
+// }
+// addNums(2,2);
 
+// function addNums(num1 = 1, num2 = 1) {
+//   return num1 + num2;
+// }
+// console.log(addNums());
 
+// const addNums = (num1 = 1, num2 = 1) => {
+//   return num1 + num2;
+// }
+// console.log(addNums());
 
+// const addNums = (num1, num2) => num1 + num2;
+//   console.log(addNums(1, 1));
 
+// const addNums = num1 => num1 + 5;
+// console.log(addNums(5))
 
-
-
-
-
+// function Person(firstName, lastName, dob) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.dob = new Date(dob);
+//   this.getBirthYear = function() {
+//     return this.dob.getFullYear();
+//   }
+//   this.getFullName = function() {
+//     return `${this.firstName} ${this.lastName}`;
+//   }
+// }
+// const person1 = new Person('Costya', 'Danilov', '11-26-1999');
+// const person2 = new Person('Ivan', 'Danilov', '01-19-1991');
+// console.log(person2.getBirthYear());
+// console.log(person2.getFullName());
 
 
