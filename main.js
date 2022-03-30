@@ -306,4 +306,32 @@
 // console.log(person2.getBirthYear());
 // console.log(person2.getFullName());
 
+// DOM
+// const form = document.getElementById('my-form');
+// const heading = document.querySelector('h1');
+// console.log(form);
+// console.log(heading);
 
+// console.log(document.querySelectorAll('.item'));
+// console.log(document.getElementsByClassName('item'));
+// console.log(document.getElementsByTagName('li'));
+
+// const items = document.querySelectorAll('.item');
+// items.forEach((item) => console.log(item));
+
+// const ul = document.querySelector('.items');
+// // ul.remove();
+// // ul.lastElementChild.remove();
+// ul.firstElementChild.textContent = 'Hello!';
+// ul.children[1].innerText = 'Costya';
+// ul.lastElementChild.innerHTML = '<h1>Hello!</h1>';
+
+// const btn = document.querySelector('.btn');
+// btn.style.background = 'red';
+
+const btn = document.querySelector('.btn');
+
+btn.addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log('click');
+});
