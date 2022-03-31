@@ -364,3 +364,153 @@
 //     emailInput = '';
 //   }
 // }
+
+// Variables
+
+// var firstname;
+// let lastname;
+// const patronymic = 'Petrovich';
+
+// let num = 5;
+// let string = 'Hello world!';
+// let bool = true;
+// let und;
+// let bigInt = 2345678934567n;
+// // let symbol = symbol();
+
+// console.log(typeof string);
+
+// let bool = true;
+// let num = false;
+// console.log(5<10)
+
+// let firstName = 'Vitalik';
+// console.log(`Hello ${firstName}, how are you doing?`);
+
+// let family = {
+//   father: 'Petr',
+//   mother: 'Nadya',
+//   brothers: ['Ivan', 'Igor'],
+//   sisters: ['Julia', 'Liuba'],
+//   me: 'Costya',
+//   together: false
+// };
+// family.new = ['we', 'love', 'each', 'other'];
+// console.log(family);
+
+// Operators
+
+// console.log(2+2);
+// console.log(5-2);
+// console.log(9*9);
+// console.log(10/5);
+// console.log(10%2);
+// console.log(10%3);
+// let num = 3;
+// console.log(num-3)
+
+// let num = 5;
+// console.log(num++);
+// console.log(num)
+
+// let string = '5';
+// console.log(+string + +'10')
+
+// let num = 5;
+// let string = '5';
+// let bool = true;
+// console.log(num===string);
+// console.log(num>=3);
+// console.log(num<=3);
+// console.log(num==string);
+// console.log(num!=5);
+
+/*let num = 5;
+num = num +3;
+num+=3;
+num -= 2;
+num *= 3;
+num /= 5;
+console.log(num)*/
+
+// Conditions
+
+// let rain = true;
+// if(rain) {
+//   console.log('take an umbrella!')
+// } else {
+//   console.log('no need to take an umbrella!')
+// }
+
+// let value = 'promocode';
+// if () {
+//   console.log('u got a discount!')
+// } else {
+//   console.log('no discount!')
+// }
+
+// Cycles
+
+// for(let a=0; a<10; a++) {
+//   console.log(a);
+// }
+// let a = 0;
+// while (a < 5) {
+//   a++
+//   console.log(a);
+// }
+
+// let i = 2;
+// do {
+//   i++
+//   console.log(i);
+// } while(i>2 && i<4)
+
+// functions
+
+// function printConsole(arg) {
+//   console.log('msg from function');
+//   console.log(arg + 3);
+// }
+// printConsole(5);
+
+// function numbers(arg) {
+//   console.log(arg + 4);
+// }
+// numbers(2);
+// console.log();
+
+// DOM
+
+// console.log(document);
+
+// const head = document.getElementById('name');
+// console.log(head);
+
+// const heading = document.querySelector('h1');
+// const id = document.querySelector('#name');
+// const msg = document.querySelector('.msg');
+
+
+// msg.classList.toggle('blue');
+// console.log(msg.classList.contains('msg'));
+// console.log(msg.className);
+
+
+// const user = document.querySelector('.user');
+
+// user.style.color = 'red';
+
+// console.log(user);
+
+
+// const heading = document.querySelector('h1');
+
+// heading.style.textDecoration = 'line-through'
+// console.log(heading.className);
+const item = document.querySelectorAll('.item');
+for (let i = 0; i < item.length; i++){
+  item[i].addEventListener('click', () => {
+    item[i].classList.toggle('through');
+  });
+}
