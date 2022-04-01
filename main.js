@@ -508,9 +508,70 @@ console.log(num)*/
 
 // heading.style.textDecoration = 'line-through'
 // console.log(heading.className);
-const item = document.querySelectorAll('.item');
-for (let i = 0; i < item.length; i++){
-  item[i].addEventListener('click', () => {
-    item[i].classList.toggle('through');
-  });
+// const item = document.querySelectorAll('.item');
+// for (let i = 0; i < item.length; i++){
+//   item[i].addEventListener('click', () => {
+//     item[i].classList.toggle('through');
+//   });
+// }
+
+// alert('lets find out your age!');
+
+// const birthYear = prompt('what year were you born?');
+
+// let currentYear = 2022;
+// let age = currentYear - birthYear;
+// console.log(`You are ${age}`);
+
+// let count = 10;
+// do {
+//   console.log(count);
+//   count++;
+// } while(count>7);
+
+// function printText(myName, myAge) {
+  
+//   return 'Hello! My name is:' + myName + ', my age is:' + myAge;
+// }
+// let myVar = printText('Costya', 22);
+// console.log(myVar)
+
+// let obj = {
+//   name: 'Petr',
+//   age: 22,
+//   outputName() {
+//     console.log('Hello! My name is:' + this.name);
+//   }
+// }
+// console.log(obj.age);
+
+
+// let arr = [1, 5, 2, 25, 16, 14, 49, 3, 1, 7]
+// arr.sort(function(a, b) {
+//   if(a===b) return 0
+//   if(a>b) return 1
+//   if(a<b) return -1
+// });
+// console.log(arr);
+
+// function calculateAge(year) {
+//   return 2022 - year
+// }
+// const myAge = calculateAge(1999);
+// console.log(myAge);
+
+function calculateAge(year) {
+  return 2022 - year
 }
+function aboutPerson(name, year) {
+  const age = calculateAge(year)
+  if (age < 100){
+  console.log('Your name is ' + name + ' and you are ' + age);
+  } else if(age > 100) {
+    console.log('Your name is ' + name + ' and you are ' + age + ' and by the way you are very old!')
+  }
+  else {
+    console.log('you are weird!')
+  }
+}
+aboutPerson('Costya', 2025);
