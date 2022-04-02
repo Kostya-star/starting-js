@@ -560,18 +560,94 @@ console.log(num)*/
 // const myAge = calculateAge(1999);
 // console.log(myAge);
 
-function calculateAge(year) {
-  return 2022 - year
-}
-function aboutPerson(name, year) {
-  const age = calculateAge(year)
-  if (age < 100){
-  console.log('Your name is ' + name + ' and you are ' + age);
-  } else if(age > 100) {
-    console.log('Your name is ' + name + ' and you are ' + age + ' and by the way you are very old!')
-  }
-  else {
-    console.log('you are weird!')
-  }
-}
-aboutPerson('Costya', 2025);
+// function calculateAge(year) {
+//   return 2022 - year
+// }
+// function aboutPerson(name, year) {
+//   const age = calculateAge(year)
+//   if (age < 100){
+//   console.log('Your name is ' + name + ' and you are ' + age);
+//   } else if(age > 100) {
+//     console.log('Your name is ' + name + ' and you are ' + age + ' and by the way you are very old!')
+//   }
+//   else {
+//     console.log('you are weird!')
+//   }
+// }
+// aboutPerson('Costya', 2025);
+
+// function showMessage(from, text) {
+//   from = '*' + from + '*';
+//   console.log(from + ': ' + text);
+// }
+// let from = 'Ann';
+// console.log(from);
+// showMessage(from, 'Hello!');
+// function showSms() {
+//   let sms = 'hello im js';
+//   console.log(sms)
+// }
+// showSms();
+
+// const myName = 'Costya';
+// function showSms() {
+//   let sms = 'Hello ' + myName;
+//   console.log(sms);
+// }
+// showSms();
+
+// let myName = 'Costya';
+// function showMessage() {
+//   myName = 'Ivan';
+//   let message = 'Hello ' + myName;
+//   console.log(message);
+// }
+
+// console.log(myName);
+// showMessage();
+// console.log(myName);
+
+// function sum(a, b) {
+//   return a + b;
+// }
+// console.log(sum(22, 1));
+// function sum(a, b) {
+//   let messageSum= a + b;
+//   console.log(messageSum);
+// }
+// sum(1, 1)
+
+// function checkAge(age) {
+//   age = prompt('u wanna buy ciggarettes? How old r u?');
+//   if (age >= 18) {
+//     alert('u got one');
+//   } else {
+//    alert('Did parents allow you?');
+//   }
+// }
+// checkAge();
+
+// function min() {
+//   let a = prompt('Insert the first number');
+//   let b = prompt('Insert the second number');
+//   if (a>b){
+//   console.log(a + ' is the greatest number of the two');
+// } else if (a===b) {
+//   console.log(a + ' and ' + b + ' are equal')
+// }
+// else {
+//     console.log(b + ' is the greatest number of the two');
+//   }
+// }
+// min();
+
+// function pow(x,n) {
+//   x = prompt('Insert the first number');
+//   n = prompt('Insert the second number');
+//   // console.log(x**n);
+//   return x**n; 
+//   return (x||n) < 1 ? 'Error';
+// }
+// console.log(pow());
+
+
