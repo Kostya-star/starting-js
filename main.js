@@ -650,4 +650,65 @@ console.log(num)*/
 // }
 // console.log(pow());
 
+// function sum(a, b) {
+//   const math = a + b;
+//   return math;
+// }
+// console.log(sum(1, 1));
+// math = a + b;
 
+// function nextInLine(arr, item) {
+
+//   return item;
+
+// }
+// const testArr = [1, 2, 3, 4, 5];
+
+// console.log('Before: ' + JSON.stringify(testArr));
+// console.log(nextInLine(testArr, 6));
+// console.log('After: ' + JSON.stringify(testArr));
+
+// let greeting = function(name) {
+//   console.log('Hello ' + name + ' !');
+// }
+// greeting('Costya');
+
+// function multiply(number) {
+//   return number * 2;
+// }
+// console.log(multiply(2));
+// console.log(multiply(2) + multiply(2));
+
+
+
+// function multiply(number) {
+//   console.log(number * 2);
+// }
+// multiply(2);
+// console.log(multiply(2) + multiply(2));
+
+//  function pickRandomWord(words) {
+//   return words[Math.floor(Math.random() * words.length)];
+// };
+// function generateRandomInsult() {
+//   let randomBodyParts = ['Head', 'Leg', 'Arm', 'Neck'];
+//   let randomAdjectives = ['Stupid', 'Ugly', 'Silly', 'Awkward', 'Awful'];
+//   let randomInsult = ['Idiot', 'Bastard', 'Scumbag', 'Asshole', 'MotherFucker'];
+//   let randomString = 'Your ' + pickRandomWord(randomBodyParts) + ' is ' + pickRandomWord(randomAdjectives) + ' because you are ' + pickRandomWord(randomInsult) + ' !!!';
+//   return randomString;
+// }
+// console.log(generateRandomInsult());
+// console.log(generateRandomInsult());
+// console.log(generateRandomInsult());
+// console.log(generateRandomInsult());
+// console.log(generateRandomInsult());
+// console.log(generateRandomInsult());
+// console.log(generateRandomInsult());
+
+function fifthLetterOfName(name) {
+  if (name.length < 5) {
+    return 'Sorry. Your name you should contain at least 5 characters';
+  }
+  return 'The fifth letter of your name is: ' + name[4] + '.';
+};
+console.log(fifthLetterOfName('df'));
