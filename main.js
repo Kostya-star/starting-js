@@ -713,4 +713,224 @@ console.log(num)*/
 // };
 // console.log(fifthLetterOfName('df'));
 
+// let user = {
+//   name: 'John',
+//   age: '30'
+// };
+// console.log(user.name);
 
+// user.isAdmin = true;
+// delete user.age;
+
+// console.log(user.age);
+
+// let user = {};
+// user['likes birds'] = true;
+// console.log(user['likes birds']);
+// delete ['likes birds']
+
+// let user  = {
+//   name: 'Costya',
+//   age: '22',
+//   city: 'Bender',
+// }
+
+// let key = prompt('What do you wanna know about the user?');
+// console.log( user[key] );
+
+// let key = 'name';
+// console.log(user.key);
+
+// let fruit = prompt('Which fruit to buy?', 'apple');
+
+// let bag = {
+//   [fruit]: 5,
+// };
+
+// console.log(bag.apple);
+
+// let fruit = prompt('which fruit to buy', 'apple');
+// let bag = {};
+
+// bag[fruit] = 5;
+// console.log(bag.apple);
+
+// function makeUser(name, age){
+//   return {
+//     name: name,
+//     age: age,
+//   };
+// }
+// let user = makeUser('Costya', 22);
+// console.log(user.age);
+
+// let user = {};
+
+// console.log( user.noSuchProperty === undefined );
+
+// let user = {
+//   name: 'Costya',
+//   age: 22,
+// };
+
+// console.log('name' in user);
+// console.log('agee' in user);
+// let a = user.name;
+// console.log(a);
+
+// let user = {
+//   name: 'Costya',
+//   age: 22,
+// };
+
+// for (let key in user) {
+//   console.log(key);
+//   console.log(user[key]);
+// }
+
+// let codes = {
+//   '+49': 'Germany',
+//   '+44': 'Great B',
+//   '+552': 'Bender',
+//   '+553': 'Tiraspol',
+//   '+1': 'USA',
+// }
+
+// for (let key in codes) {
+//   console.log(key);
+// }
+
+// let user = {
+//   name: 'John',
+// }
+// user.surname = 'Smith';
+// user.name = 'Pete'
+// delete user.name;
+// console.log(user.name);
+
+// let obj = {
+//   name: 'Costya',
+// }
+
+// function isEmpty(obj) {
+//   for(let key in obj) {
+//     return false;
+//   } 
+//     return true;
+//   }
+//   console.log(obj.key);
+
+// let sum = salaries.John + salaries.Ann + salaries.Pete;
+// console.log(sum);
+
+// let salaries = {
+//   John: 100,
+//   Ann: 100,
+//   Pete: 100
+// };
+
+// let sum = 0;
+// for (let key in salaries) {
+//   sum = sum + salaries[key];
+// }
+// console.log(sum);
+
+// let obj = {
+//   n: 2,
+// };
+// function multiplyNumeric(obj) {
+//   for (let key in obj) {
+//     if (typeof obj[key] == 'number') {
+//       obj[key] = obj[key]*2;
+//     }
+//   }
+// }
+// multiplyNumeric(obj); 
+// console.log(obj.n);
+
+// let user = {
+//   name: 'Costya',
+//   age: 22,
+// };
+
+// let clone = {};
+
+// for (let key in user) {
+//   clone[key] = user[key];
+// }
+// clone.name = 'Ivan';
+
+// console.log(clone.name);
+
+// let user = {
+//   name: 'Costya',
+//   sizes: {
+//     height: 180,
+//     width: 45,
+//   }
+// };
+
+// let clone = Object.assign({}, user);
+
+// console.log(user.sizes === clone.sizes);
+// user.sizes.width++;
+// console.log(clone.sizes.width);
+
+// const user = {
+//   name: 'Costya',
+// };
+
+// user.name = 'Costa!!!'
+// console.log(user.name);
+
+// let user = {
+//   name: 'Costya',
+// };
+// let admin = user;
+// user = null;
+
+// console.log(admin);
+
+// let user = {
+//   name: 'Costya',
+//   age: 22,
+// };
+
+// user.sayHi = function() {
+//   console.log('Hello!');
+// }
+
+// user.sayHi();
+
+// let user = {
+
+// };
+
+// function sayHi() {
+//   console.log('Hello');
+// }
+
+// user.sayHi = sayHi;
+
+// user.sayHi();
+
+// let user = {
+//   name: 'Costya',
+//   age: 22,
+//   sayHi() {
+//     console.log('Hello! ' + this.name);
+//   }
+// };
+
+// user.sayHi();
+
+
+let user = {
+  name: 'Costya',
+  age: 22,
+  sayHi() {
+    console.log('Hello! ' + user.name);
+  }
+};
+
+user.sayHi();
