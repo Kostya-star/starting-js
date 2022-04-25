@@ -705,10 +705,12 @@ console.log(num)*/
 // console.log(generateRandomInsult());
 // console.log(generateRandomInsult());
 
-function fifthLetterOfName(name) {
-  if (name.length < 5) {
-    return 'Sorry. Your name you should contain at least 5 characters';
-  }
-  return 'The fifth letter of your name is: ' + name[4] + '.';
-};
-console.log(fifthLetterOfName('df'));
+// function fifthLetterOfName(name) {
+//   if (name.length < 5) {
+//     return 'Sorry. Your name you should contain at least 5 characters';
+//   }
+//   return 'The fifth letter of your name is: ' + name[4] + '.';
+// };
+// console.log(fifthLetterOfName('df'));
+
+
