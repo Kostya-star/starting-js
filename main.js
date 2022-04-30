@@ -925,12 +925,104 @@ console.log(num)*/
 // user.sayHi();
 
 
+// let user = {
+//   name: 'Costya',
+//   age: 22,
+//   sayHi() {
+//     console.log('Hello! ' + user.name);
+//   }
+// };
+
+// user.sayHi();
+
+// let user = {
+//   name: 'John',
+//   age: 30
+// }
+// user.sayHi = function () {
+//   console.log('Hey!');
+// };
+// user.sayHi();
+
+// let user = {
+//   name: 'Costya',
+// }
+// user.age = 22;
+
+// console.log(user);
+
+// let user = {};
+
+// function sayHi() {
+//   console.log('Hey!');
+// }
+
+// user.sayHi = sayHi;
+
+// console.log(user);
+
+// let user;
+// user = {
+//   sayHi: function() {
+//     console.log('Hello!');
+//   }
+// }
+// console.log(user);
+
+// let user;
+// user = {
+//   sayHi() {
+//     console.log('Hey!');
+//   }
+// }
+
+// let user = {
+//   name: 'Costya',
+//   sayHi() {
+//     console.log(this.name);
+//   }
+// };  
+
+// user.sayHi();
+
+// let user = {
+//   name: 'Costya',
+//   age: 22,
+//   sayHi() {
+//     console.log(user.age);
+//   }
+// };
+// user.sayHi();
+
+// let user = {
+//   name: 'Costya',
+//   age: 22,
+//   sayHi() {
+//     console.log(this.name);
+//   }
+// };
+
+// let admin = user;
+// user = null;
+
+// admin.sayHi();
+
+// let user = {name: 'John'};
+// let admin = {name: 'Admin'};
+
+// function sayHi () {
+//   console.log(this.name);
+// }
+
+// user.f = sayHi;
+// admin.f = sayHi;
+
+// user.f();
+// admin.f();
+// admin['f']();
+
 let user = {
   name: 'Costya',
-  age: 22,
-  sayHi() {
-    console.log('Hello! ' + user.name);
-  }
+  go: function() { console.log(this.name); }
 };
-
-user.sayHi();
+user.go()
