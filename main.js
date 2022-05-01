@@ -1021,8 +1021,52 @@ console.log(num)*/
 // admin.f();
 // admin['f']();
 
-let user = {
-  name: 'Costya',
-  go: function() { console.log(this.name); }
-};
-user.go()
+// let user = {
+//   name: 'Costya',
+//   go: function() { console.log(this.name) }
+// };
+// (user.go)()
+
+
+// let calculator = {
+  
+//   read() {
+//     let a = +prompt('insert a');
+//     let b = +prompt('insert b');
+//   },
+//   sum() {return a + b;},
+//   mul() {return a * b;}
+// }
+// calculator.read();
+// console.log( calculator.sum() );
+// console.log( calculator.mul() );
+
+// let calc = {
+//   read() {
+//     this.a = +prompt('insert a');
+//     this.b = +prompt('insert b');
+// },
+//   sum() { return this.a + this.b; },
+//   mul() { return this.a * this.b; }
+// }
+
+// calc.read();
+// console.log( calc.sum() );
+// console.log( calc.mul() );
+
+// let ladder = {
+//   step: 0,
+//   up() {
+//    console.log(this.step++);
+//    console.log(this.step);
+//   },
+//   down() {
+//    console.log(this.step--);
+//   },
+//   showStep: function() {
+//     console.log( this.step );
+//   }
+// };
+
+// ladder.showStep()
+// ladder.up()
