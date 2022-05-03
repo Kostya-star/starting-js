@@ -1041,6 +1041,37 @@ console.log(num)*/
 // console.log( calculator.sum() );
 // console.log( calculator.mul() );
 
+
+// let ladder = {
+  //   step: 0,
+  //   up() {
+    //    console.log(this.step++);
+    //    console.log(this.step);
+    //   },
+    //   down() {
+      //    console.log(this.step--);
+      //   },
+      //   showStep: function() {
+        //     console.log( this.step );
+        //   }
+        // };
+        
+        // ladder.showStep()
+        // ladder.up()
+        
+        
+        // function BigUser() {
+          //   this.name = 'Costya';
+          //   return {name: 'Godzilaa'};
+          // }
+          
+          // console.log( new BigUser().name );
+          
+          // function SmallUser() {
+            //   this.name = 'Costya';
+            //   return;
+            // }
+            // console.log( new SmallUser().name );
 // let calc = {
 //   read() {
 //     this.a = +prompt('insert a');
@@ -1054,19 +1085,161 @@ console.log(num)*/
 // console.log( calc.sum() );
 // console.log( calc.mul() );
 
-// let ladder = {
-//   step: 0,
-//   up() {
-//    console.log(this.step++);
-//    console.log(this.step);
-//   },
-//   down() {
-//    console.log(this.step--);
-//   },
-//   showStep: function() {
-//     console.log( this.step );
+
+// function Calc() {
+//   this.read = function() {
+//     this.a = +prompt('insert a');
+//     this.b = +prompt('insert b');
+//   };
+//   this.sum = function() {
+//     return this.a + this.b;
+//   };
+//   this.mul = function() {
+//     return this.a * this.b;
+//   };
+// }
+
+// let calc = new Calc();
+// calc.read();
+
+// console.log( 'Sum=' + calc.sum() );
+// console.log( 'Mul=' + calc.mul() );
+
+
+// --------------------------------------------
+
+// let button = document.getElementById('finish');
+
+// button.addEventListener('click', checkTest);
+// function checkTest() {
+//   let result = 0;
+
+//   let answerOne = document.getElementById('q1').value;
+//   if (answerOne === '4') {
+//     result ++;
+//   }
+//   let answerTwo = document.getElementById('q2').value;
+//   if (answerTwo === '6') {
+//     result ++;
+//   }
+//   let answerThree = document.getElementById('q3').value;
+//   if (answerThree === '10') {
+//     result ++;
+//   }
+//   let answerFour = document.getElementById('q4').value;
+//   if (answerFour === '-1') {
+//     result ++;
+//   }
+//   let answerFive = document.getElementById('q5').value;
+//   if (answerFive === '1') {
+//     result ++;
+//   }
+//   alert('the quantity of the right answers: ' + result);
+// }
+
+// alert('щелкни "OK" чтоб начать игру')
+// alert('давай посмотрим как хорошо ты меня знаешь(щелкай ок)')
+
+// let btn = document.getElementById('btn');
+// btn.addEventListener('click', finish);
+// function finish() {
+//   let outcome = 0;
+
+//   let qOne = document.getElementById('q1').value;
+//   if (qOne === '22') {
+//     outcome++;
+//   }
+  
+//   let qTwo = document.getElementById('q2').value;
+//   if (qTwo === 'Costya') {
+//     outcome++;
+//   }
+
+//   let qThree = document.getElementById('q3').value;
+//   if (qThree === 'Danilov') {
+//     outcome++;
+//   }
+
+//   let qFour = document.getElementById('q4').value;
+//   if (qFour === '7') {
+//     outcome++;
+//   } 
+
+//   alert('the quantity of the right answers is: ' + outcome)
+
+//   function aplouse() {
+//     if (outcome === 4) {
+//       alert('You guessed all of the answers!')
+//     } else{
+//       alert('not good!')
+//     }
+//   }
+//   aplouse()
+// }
+
+
+// let user = {};
+
+// console.log(user.adress.street);
+
+// let html = document.querySelector('.elem').innerHTML;
+
+// let user = {};
+
+// console.log(user.address ? user.address.street : undefined);
+
+// let html = document.querySelector('.elem') ? document.querySelector('.elem').innerHTML : null;
+
+// let user = {};
+
+// alert(user.address && user.address.street && user.address.street.name);
+
+// let user = {};
+
+// console.log(user?.adress?.street);
+
+// let html = document.querySelector('.elem')?.innerHTML;
+
+// let user = null;
+
+// console.log( user?.address );
+// console.log( user?.address.street);
+
+// let user = null;
+// let x = 0;
+
+// user?.sayHi(x++);
+
+// console.log(user);
+
+// let userAdmin = {
+//   admin() {
+//     console.log('I am Admin');
 //   }
 // };
 
-// ladder.showStep()
-// ladder.up()
+// let userGuest = {};
+
+// userAdmin.admin?.();
+// userGuest.admin?.();
+
+// let key = 'firstName';
+
+// let user1 = {
+//   firstName: 'Costya'
+// };
+
+// let user2 = null;
+
+// console.log( user1?.[key] );
+// console.log( user2?.[key] );
+
+// delete user1?.[key];
+// console.log(user1?.[key]);
+
+// let family = {
+//   mom: 'Nadya',
+//   dad: 'Petr'
+// }
+// family.son = 'Costya';
+// console.log(family);

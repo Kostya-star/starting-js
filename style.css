@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -77,4 +77,9 @@ header {
 }
 .through {
   text-decoration: line-through;
+} */
+.heading {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
 }
