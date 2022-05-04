@@ -1243,3 +1243,136 @@ console.log(num)*/
 // }
 // family.son = 'Costya';
 // console.log(family);
+
+// const person = {
+//   name: 'Alex',
+//   age: 22,
+//   toString: null,
+//   valueOf: null
+// }
+
+// const personList = {}
+// personList[person] = 'Odessa'
+// console.log(personList);
+
+
+// let person = {
+//   name: 'Costya',
+//   sayHi: function() {
+//     console.log('Hello, friend!');
+//   }
+// };
+
+// person.sayHi();
+
+// let string = "Hello, brother!";
+
+// console.log( string.toUpperCase() );
+
+// let name = 'Costya';
+
+// console.log( name.toUpperCase() );
+
+// let number = 1.123456;
+
+// console.log(number.toFixed(3));
+
+// console.log(typeof 1);
+// console.log( typeof new Number(0) );
+
+// let zero = new Number(0);
+
+// if(zero) {
+//   console.log('zero is true');
+// }
+
+// let num = Number('123');
+
+// console.log(num);
+// console.log(typeof num);
+
+// let str = 'Hi';
+// str.test = 5;
+
+// console.log(str.test);
+
+// let billion = 1e17;
+
+// console.log(7.3e9);
+// let ms = 0.000001;
+// console.log(ms);
+// let ms = 1e-6;
+// console.log(ms);
+
+// console.log(0xff);
+
+// let num = 1.23456;
+// console.log(Math.floor(num * 100)/100);
+
+// let num = 12.34;
+// console.log( num.toFixed(1) );
+
+// let num = 12.39;
+// console.log( num.toFixed(1) );
+
+// let num = 12.34;
+// console.log( num.toFixed(5) );
+
+// console.log(1e20345);
+
+// console.log(0.1 + 0.2 == 0.3);
+
+// console.log(0.1.toFixed(20));
+
+// let sum = 0.1 + 0.2;
+// console.log( +sum.toFixed(1) );
+
+// console.log( NaN === NaN );
+
+// console.log( isNaN(NaN) );
+
+// console.log( isFinite('15') );
+// console.log( isFinite('str') ); 
+// console.log(Object.is(0.1 + 0.1, 0.2)); 
+
+// console.log( +'100px' );
+
+// console.log( parseInt('100px') );
+// console.log( parseFloat('12.5em') );
+// console.log( parseInt('12.5em') );
+// console.log( parseFloat('12.5.5') );
+// console.log( parseInt('kl100') );
+
+// console.log( Math.random() );
+// console.log( Math.max(1,2,3,5,6) );
+// console.log( Math.min(1,2,3,5,6) );
+
+// console.log( Math.pow(2, 4));
+
+// let a = +prompt('insert a', '');
+// let b = +prompt('insert b', '');
+// console.log( a + b );
+
+// console.log( 4.35.toFixed(1) );
+
+// function readNumber() {
+//   let realNumber;
+//   do{
+//     realNumber = +prompt('insert a number!')
+//   } while( !isFinite(realNumber) )
+
+//   if(realNumber === null || realNumber === '') {
+//     return null;
+//   }
+//   return +realNumber;
+// }
+
+// console.log(`your number is: ${readNumber()}`);
+
+function random(min, max) {
+  min =  Math.random(parseFloat());
+  max =  Math.random(parseFloat());
+  return min ;
+  
+}
+console.log(random(2, 4));
