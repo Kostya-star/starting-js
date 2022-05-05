@@ -1369,10 +1369,211 @@ console.log(num)*/
 
 // console.log(`your number is: ${readNumber()}`);
 
-function random(min, max) {
-  min =  Math.random(parseFloat());
-  max =  Math.random(parseFloat());
-  return min ;
+// function random(min, max) {
+//   min =  Math.random(parseFloat());
+//   max =  Math.random(parseFloat());
+//   return min ;
   
-}
-console.log(random(2, 4));
+// }
+// console.log(random(2, 4));
+
+// let i = 0;
+// while (i < 11) {
+//   i += 0.2;
+//   if (i > 9.8 && i < 10.2) alert(i);
+// }
+
+// function sum(a, b) {
+//   return a + b;
+// }
+// console.log(`1 + 2 = ${sum(1,2)}`);
+
+// let guestList = `Guests:
+// * John
+// * Pete
+// * Mary`;
+// console.log(guestList);
+
+// let guestList = 'Guests: \n*Costya \n*Vanya \n*Igor'
+// console.log(guestList);
+
+// let str1 = 'Hello \nWorld!';
+// let str2 = `Hello 
+// World!`
+// console.log(str1);
+// console.log(str2);
+// console.log(str1 === str2);
+
+// console.log('\u{1F60F}');
+
+// console.log('I\'m Costya');
+// console.log(`I'm Costya`);
+// console.log(`I'm Costya and this is a backslash \\`);
+
+// console.log('My length is'.length);
+
+// let string = `Hello!`;
+
+// console.log( string[0] );
+// console.log( string.charAt(0));
+// console.log( string[string.length - 1] );
+
+// for(let char of 'Hello!') {
+//   console.log(char);
+// }
+
+// let string = 'Hi!';
+
+// string = 'h' + string[1];
+// console.log(string);
+
+// console.log('interfase'.toUpperCase() );
+// console.log('INterface'.toLowerCase() );
+
+// console.log('INTERFACE'[2].toLowerCase() );
+
+// let string = 'i see everything';
+// console.log(string.indexOf('see'));
+
+// let string = 'Ослик Иа-Иа посмотрел на виадук';
+
+// let target = 'Иа';
+// let pos = 0;
+
+// while (true) {
+//   let foundPos = string.indexOf(target, pos);
+//   if(foundPos == -1) break;
+
+//   console.log( `Found: ${foundPos}` );
+//   pos = foundPos + 1;
+// }
+
+// let string = 'Ослик Иа Иа посмотрел на виадук';
+// console.log(string.indexOf('Иа', 7));
+
+// let string = 'Costya';
+
+// console.log(string.indexOf('a'));
+
+
+
+// ----------------------------------
+// let string = 'My mother is mad at me';
+// console.log(string.indexOf('m', 2));
+
+// let str = 'Widget id with id';
+// console.log( str.indexOf('id', 1) ) 
+// ----------------------------------
+
+// console.log(~-5);
+
+// let string = 'Widget Widget Widget Widget';
+// // console.log(~string.indexOf('Widget'));
+// if(~string.indexOf('Widget')) {
+//   console.log('Совп есть');
+// }
+
+// let string = 'Widget with id';
+// console.log(string.includes('id'));
+
+// console.log('Widget with id'.includes('Widget'));
+
+// console.log('Widget'.includes('id', 5));
+
+// console.log('Constantin'.startsWith('Con'));
+// console.log('Constantin'.endsWith('Tin'));
+
+// let string = 'Costya';
+// console.log(string.substr(2, 3));
+
+// console.log(string.slice(0, 3));
+// console.log(string.slice(0, 1));
+// console.log(string.slice(4));
+
+// console.log('a' > 'J');
+
+// let string = '';
+
+// for(let i = 65; i<=220; i++) {
+//   // string = string + String.fromCodePoint(i);
+//   string+=String.fromCodePoint(i);
+// }
+// console.log(string);
+
+// console.log('a'.localeCompare('Z'));
+
+// function ucFirst(string) {
+//   string = string[0].toUpperCase() + string.slice(1);
+//   return string;
+// }
+// console.log(ucFirst('costya'));
+
+// function checkSpam(string) {
+//   string = string.toLowerCase();
+//   // return (string.includes('viagra') || string.includes('xxx'));
+//   if (string.includes('viagra') || string.includes('xxx')) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+  
+// } 
+// console.log(checkSpam('viaGraa')); 
+
+// function truncate(str, maxlength) {
+//   if(str.length > maxlength) {
+//     return str.slice(0, maxlength) + '...';
+//   } else {
+//     return str;
+//   }
+// }
+// console.log(truncate('Hello', 2)); 
+
+// function truncate(string, maxStringLength) {
+//   if(string.length > maxStringLength) {
+//     return string.slice(0, maxStringLength) + '...';
+//   } else {
+//     return string;
+//   }
+// }
+
+// console.log(truncate('I wanna sleep so baaaaddddd', 20));
+
+// function extractCurrencyValue(string) {
+//   return +string.slice(1)
+// }
+// console.log(extractCurrencyValue('*120'));
+
+// function extractCurrencyValue(string) {
+//   let newNumber = '';
+//   for(num of string) {
+//     if (isFinite(num)) {
+//       newNumber = newNumber + num
+//     }
+//   }
+//   return +newNumber;
+// }
+// console.log(extractCurrencyValue('^&*320^&5678'));
+
+// let fruits = ['Apple', 'Orange', 'Pear'];
+
+// console.log(fruits[0]);
+// console.log(fruits[1]);
+// console.log(fruits[2]);
+// fruits[2] = 'Beetroot';
+// console.log(fruits[2]);
+// fruits[3] = 'Lemon';
+// console.log(fruits[3]);
+
+// let fruits = ['Apple', 'Orange', 'Pear'];
+
+// console.log(fruits);
+
+// let arr = ['apple', {name: 'Costya'}, function() {console.log('hey!');}];
+
+// console.log(arr[1].name);
+// arr[2]();
+
+let fruits = ['Apple', 'Orange', 'Plum'];
+// console.log(fruits[fruits.length - 1]);
+console.log(fruits.at(-1));
