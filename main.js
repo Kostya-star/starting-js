@@ -1574,6 +1574,85 @@ console.log(num)*/
 // console.log(arr[1].name);
 // arr[2]();
 
-let fruits = ['Apple', 'Orange', 'Plum'];
-// console.log(fruits[fruits.length - 1]);
-console.log(fruits.at(-1));
+// let fruits = ['Apple', 'Orange', 'Plum'];
+// // console.log(fruits[fruits.length - 1]);
+// console.log(fruits.at(-1));
+
+// let fruits = ['Apple', 'Orange', 'Pear'];
+// console.log( fruits.pop() );
+// console.log(fruits);
+// console.log( fruits.push('Pear') );
+// console.log(fruits);
+
+// let fruits = ['Apple', 'Orange', 'Pear'];
+// console.log( fruits.shift() );
+// console.log( fruits );
+// console.log( fruits.unshift('Apple') );
+// console.log( fruits );
+
+// let fruits = ['Apple', 'Orange', 'Pear'];
+// fruits.unshift('begining');
+// fruits.push('end')
+// console.log(fruits);
+
+// let fruits = ['Banana']
+// let arr = fruits;
+// console.log( arr === fruits );
+// arr.push('Pear');
+// console.log( fruits );
+
+// let fruits = ['Apple', 'Orange', 'Pear'];
+// for(let i = 0; i<fruits.length; i++) {
+//   console.log(fruits[i]);
+// }
+
+// let fruits = ['Apple', 'Orange', 'Pear'];
+// for ( fruit of fruits ) {
+//   console.log(fruit);
+// }
+
+// let fruits = ['Apple', 'Orange', 'Pear'];
+// for (let key in fruits) {
+//   console.log(fruits[key]);
+// }
+
+// let fruits = ['Apple', 'Orange', 'Pear'];
+// fruits.length = 2;
+// console.log(fruits);
+// fruits.length = 3;
+// console.log(fruits[1]);
+
+// let arr = new Array(2);
+// console.log( arr[0] );
+// console.log( arr.length );
+
+// let matrix = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+// console.log(matrix[2][2]);
+
+// let arr = [1, 2, 3];
+
+// console.log( arr );
+// console.log( String(arr) === '1,2,3' );
+
+// console.log( [] + 1);
+// console.log( [1] + 1);
+// console.log( [1, 2] + 1);
+
+// let letters = ['a', 'b', 'c'];
+
+// let alphabet = letters;
+// alphabet.push('d');
+// console.log(letters.length);
+
+let styles = ['Джаз', 'Блюз'];
+
+styles.push('рок-н-ролл');
+styles[1] = 'Классика';
+console.log(styles.shift());
+styles.unshift('Рэп', 'Рэгги');
+
+console.log(styles);
