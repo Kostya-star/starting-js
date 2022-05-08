@@ -1648,11 +1648,70 @@ console.log(num)*/
 // alphabet.push('d');
 // console.log(letters.length);
 
-let styles = ['Джаз', 'Блюз'];
+// let styles = ['Джаз', 'Блюз'];
 
-styles.push('рок-н-ролл');
-styles[1] = 'Классика';
-console.log(styles.shift());
-styles.unshift('Рэп', 'Рэгги');
+// styles.push('рок-н-ролл');
+// styles[1] = 'Классика';
+// console.log(styles.shift());
+// styles.unshift('Рэп', 'Рэгги');
 
-console.log(styles);
+// console.log(styles);
+
+// let styles = ['0', '1', '2', '3', '4', '5', '5'];
+// styles[Math.floor((styles.length) / 2)] = 'number';
+// console.log(styles);
+
+// let arr = ['a', 'b'];
+
+// arr.push(function() {
+//   console.log(this);
+// })
+
+// arr[2]();
+
+// function sumInput() {
+//   let arr = [];
+
+//   while (true) {
+//     let value = prompt('insert a number!')
+//     if(value === '' || value === null || !isFinite(value)) {
+//       break;
+//     } else {
+//       arr.push(+value);
+//     }
+//   }
+//   let sum = 0;
+//   for (let i = 0; i<arr.length; i++) {
+//     sum = sum + arr[i];
+//   }
+
+
+//   // for(let number of arr) {
+//   //   sum = sum + number;
+//   // }
+//   return sum;
+// } 
+// console.log( sumInput() );
+
+// let arr = ['1', '2', '3'];
+
+// for (let i = 0; i<arr.length; i++) {
+//   console.log(arr[i]);
+// }
+
+// function sumInput() {
+//   let array = [];
+
+//   while (true) {
+//     let number = prompt('insert a number')
+//     if (number === '' || number === null || !Number(number)) {break}
+//     array.push(+number)
+//   }
+
+//   let sum = 0;
+//   for (let i=0; i<array.length; i++) {
+//     sum = sum + array[i]
+//   }
+//   return sum;
+// }
+// console.log(sumInput());
