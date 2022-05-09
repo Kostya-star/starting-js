@@ -1715,3 +1715,142 @@ console.log(num)*/
 //   return sum;
 // }
 // console.log(sumInput());
+
+// function getMaxSubSum(arr) {
+//   let maxSum = 0;
+//   let partialSum = 0;
+
+//   for (let item of arr) {
+//     partialSum = partialSum + item;
+//     maxSum = Math.max(maxSum, partialSum);
+//     if (partialSum < 0) partialSum = 0;
+//   }
+//   return maxSum;
+// }
+
+// console.log(getMaxSubSum([1, 2, 3, 4, 5])); 
+
+
+// let arr = ['I', 'go', 'home'];
+// delete arr[1];
+// console.log(arr[1]);
+// console.log(arr.length);
+
+// let arr = ['I', 'learn', 'js'];
+
+// arr.splice(1, 1)
+// console.log(arr);
+
+// let arr = ['Я', 'изучаю', 'js', 'прямо', 'сейчас'];
+// arr.splice(0, 3, "let's", 'dance')
+// console.log(arr);
+
+// let arr = ['Я', 'изучаю', 'js', 'прямо', 'сейчас'];
+// let removed = arr.splice(0, 2);
+// console.log(removed);
+
+// let arr = ['Я', 'изучаю', 'js', 'прямо', 'сейчас'];
+// arr.splice(2, 0, 'hard', 'language');
+// console.log(arr);
+
+// let arr = ['t', 'e', 's', 't'];
+
+// console.log(arr.slice(1, 3));
+// console.log(arr.slice(-2));
+
+// let arr = [1, 2];
+// console.log(arr.concat([3, 4]));
+// console.log(arr.concat([3, 4],[5, 6]));
+// console.log(arr. concat([3, 4], 5, 6));
+
+// let arr = [1, 2];
+// let arraylike = {
+//   0: 'smth',
+//   length: 1
+// };
+// console.log(arr.concat(arraylike));
+
+// ['one', 'two', 'three'].forEach(alert)
+// ['one', 'two', 'three'].forEach( (item, index, array) => {
+//   console.log(`${item} has a position ${index} in ${array}`);
+// })
+
+// ['one', 'two', 'three'].forEach(( item, index, array) => {
+//   console.log(`${item} has a position ${index} in ${array}`);
+// })
+
+// let arr = [1, 0, false];
+
+// console.log(arr.indexOf(0));
+// console.log(arr.indexOf(false));
+// console.log(arr.indexOf(null));
+
+// console.log(arr.includes(1));
+
+// let users = [
+//   {id: 1, name: 'Vasya'},
+//   {id: 2, name: 'Petr'},
+//   {id: 3, name: 'Masha'}
+// ];
+// let user = users.find(item => item.id == 1);
+// console.log(user.name);
+
+// let users = [
+//   {id: 1, name: 'Vasya'},
+//   {id: 2, name: 'Petr'},
+//   {id: 3, name: 'Masha'}
+// ];
+
+// let someUsers = users.filter(item => item.id < 3);
+// console.log(someUsers.length);
+
+// let lengths = ['costa', 'vana', 'igor'].map(item => item.length);
+// console.log(lengths);
+
+// function compareNumeric(a, b) {
+//   if(a>b) return 1;
+//   if(a==b) return 0;
+//   if(a<b) return -1
+// }
+// let arr = [1, 2, 3, 7, 4];
+// arr.sort(compareNumeric);
+// console.log(arr);
+
+
+// let arr = [1, 2, 15];
+// arr.sort( (a, b) => a - b );
+// console.log(arr);
+
+// let arr = [1, 2, 3, 4, 5];
+// arr.reverse();
+// console.log(arr);
+
+// let names = 'Vasya, Petr, Masha';
+// let arr = names.split(', ');
+// for(let name of arr) {
+//   console.log(`this sms will be received by ${name}`);
+// }
+
+// let arr = 'Vasya, Petr, Sasha'.split(', ', 2);
+// console.log(arr);
+
+// let str = 'test';
+// console.log(str.split(''));
+
+// let arr = ['Vasya', 'Petr', 'Masha'];
+// let str = arr.join(', ')
+// console.log(str);
+
+// let arr = [1, 2, 3, 4, 5];
+// let result = arr. reduce((sum, current) => sum + current, 0);
+// console.log(result);
+
+// let arr = [1, 2, 3, 4, 5];
+// let result = arr.reduce((sum, current) => sum + current);
+// console.log(result);
+
+// console.log(typeof {});
+// console.log(typeof []);
+
+console.log(Array.isArray([]));
+console.log(Array.isArray({}));
