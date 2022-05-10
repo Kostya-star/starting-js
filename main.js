@@ -1852,5 +1852,208 @@ console.log(num)*/
 // console.log(typeof {});
 // console.log(typeof []);
 
-console.log(Array.isArray([]));
-console.log(Array.isArray({}));
+// console.log(Array.isArray([]));
+// console.log(Array.isArray({}));
+
+// let arr = [1, 2, 3, 4, 5];
+
+// let sum = 0;
+// for(let i = 0; i<arr.length; i++) {
+//   sum = sum + arr[i]
+// }
+// console.log(sum);
+
+// let arr = [1, 2, 3, 4, 5];
+// let b = arr.reduce( (prev, item, index) => {
+//   return prev + item;
+// }, 0)
+// console.log(b);
+
+// let arr = [1,2,3,5,7,3,9,444,7];
+// let max = arr[0];
+// for(let i = 0; i<arr.length; i++) {
+//   if (arr[i] > max) {
+//     max = arr[i];
+//   }
+// }
+// console.log(max);
+
+
+// let arr = [1,2,3,5,7,3,9,444,7];
+
+// let c = arr.reduce( (prev, item) => {
+//   if(prev < item) {
+//     return item;
+//   }
+//   else {
+//     return prev;
+//   }
+// }, arr[0]);
+// console.log(c);
+
+const people = [
+  {name: 'Costya', age: 22, budget: 6000},
+  {name: 'Ivan', age: 29, budget: 5000},
+  {name: 'Igor', age: 28, budget: 4000},
+  {name: 'Petr', age: 52, budget: 3000},
+  {name: 'Nadya', age: 51, budget: 2000},
+  {name: 'Julia', age: 15, budget: 1000},
+]
+
+// for(let i = 0; i<people.length; i++) {
+//   console.log(people[i]);
+// }
+// for(let person of people) {
+//   console.log(person);
+// }
+
+// people.forEach(function(person, index, pplArr) {
+//   console.log(person);
+// })
+
+// people.forEach( person => console.log(person));
+
+// const newPpl = people.map( person => `${person.age * 2}`)
+
+// console.log(newPpl);
+// const adults = [];
+// for(let i = 0; i<people.length; i++) {
+//   if (people[i].age >= 18) {
+//     adults.push(people[i])
+//   }
+// }
+// console.log(adults);
+
+// const adults = people.filter(person => person.age >= 18);
+// console.log(adults);
+
+// let sum = 0;
+// for(let i = 0; i<people.length; i++) {
+//   sum += people[i].budget;
+// }
+// console.log(sum);
+
+// let sum = people.reduce( (prev, item) => prev + item.budget, 0)
+// console.log(sum);
+
+// const igor = peopl
+// const igorIndex = people.findIndex( person => person.name === 'Igor');
+// console.log(igorIndex);
+
+// const sum = people
+//   .filter( person => person.budget > 3000)
+//   .map(person => {
+//     return {
+//       info: `${person.name} (${person.age})`,
+//       budget: person.budget,
+//     }
+//   })
+//   .reduce( (sum, person) => sum + person.budget, 0)
+
+//   console.log(sum);
+
+
+// let names = 'Costya, Petr, Masha';
+// let arr = names.split(', ');
+// for(let name of arr) {
+//   console.log(`sms will be received by ${name}`);
+// }
+
+// let arr = ['Costya', 'Petr', 'Vanya'];
+// let str = arr.join(', ');
+// console.log(typeof str);
+
+// function camelize(str) {
+//   return str
+//   .split('-')
+//   .map( (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1) )
+//   .join('');
+// }
+// console.log(camelize('string-mother-again'));
+
+// function camelize(str) {
+//   return str
+//   .split('-')
+//   .map( (word, index) => (index === 0) ? word : word[0].toUpperCase() + word.slice(1) )
+//   .join('')
+// }
+// //  'border-left-width' ----- ['border', 'left', 'width']------- 
+// console.log(camelize('border-left-width'));
+
+
+// let arr = [1, 2, 54, 86, 45,3,6,364,2,5];
+
+// function filterRange(a, b) {
+  
+//   return arr.filter( item => (a < item && item < b));
+// }
+
+// console.log(filterRange(1, 46 ));  
+// console.log(arr);
+
+// let users = [
+//   {id: 1, name: "Вася"},
+//   {id: 2, name: "Петя"},
+//   {id: 3, name: "Маша"}
+// ];
+
+// let someUsers = users.filter(item => item.id < 3);
+
+// console.log((someUsers));
+
+
+// function filterRangeInPlace(arr, a, b) {
+//   for(let i=0; i<arr.length; i++) {
+//     let value = arr[i];
+    
+//     if(value < a || value > b) {
+//       arr.splice(i, 1);
+//       i--;
+//     }
+//   }
+// }
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// filterRangeInPlace(arr, 3, 7)
+// console.log(arr);
+
+// function compareNumeric(a, b) {
+//   if(a>b) return -1;
+//   if(a==b) return 0;
+//   if(a<b) return 1;
+// }
+// let arr = [1,2,15,3,1,67]
+// arr.sort(compareNumeric);
+// console.log(arr);
+
+// let arr = [5, 2, 1, -10, 8];
+// function sortArr(a, b) {
+//   if(a>b) return -1;
+//   if(a==b) return 0;
+//   if(a<b) return 1
+// }
+// arr.sort(sortArr)
+// console.log(arr);
+
+// let arr = [5, 2, 1, -10, 8];
+// arr.sort( (a, b) => {
+//   console.log(a + '<>' + b);
+// })
+
+// let arr = [5, 2, 1, -10, 8];
+// arr.sort( (a, b) => a-b);
+// // arr.reverse();
+// console.log(arr);
+
+
+function copySorted(arr) {
+  return arr.slice().sort();
+}
+let arr = ['HTML', 'JavaScript', 'CSS'];
+let sorted = copySorted(arr);
+console.log(sorted);
+
+// let sorted = copySorted(arr);
+// console.log(sorted);
+// console.log(arr);
