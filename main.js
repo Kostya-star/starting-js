@@ -1891,14 +1891,14 @@ console.log(num)*/
 // }, arr[0]);
 // console.log(c);
 
-const people = [
-  {name: 'Costya', age: 22, budget: 6000},
-  {name: 'Ivan', age: 29, budget: 5000},
-  {name: 'Igor', age: 28, budget: 4000},
-  {name: 'Petr', age: 52, budget: 3000},
-  {name: 'Nadya', age: 51, budget: 2000},
-  {name: 'Julia', age: 15, budget: 1000},
-]
+// const people = [
+//   {name: 'Costya', age: 22, budget: 6000},
+//   {name: 'Ivan', age: 29, budget: 5000},
+//   {name: 'Igor', age: 28, budget: 4000},
+//   {name: 'Petr', age: 52, budget: 3000},
+//   {name: 'Nadya', age: 51, budget: 2000},
+//   {name: 'Julia', age: 15, budget: 1000},
+// ]
 
 // for(let i = 0; i<people.length; i++) {
 //   console.log(people[i]);
@@ -2047,13 +2047,246 @@ const people = [
 // console.log(arr);
 
 
-function copySorted(arr) {
-  return arr.slice().sort();
-}
-let arr = ['HTML', 'JavaScript', 'CSS'];
-let sorted = copySorted(arr);
-console.log(sorted);
+// function copySorted(arr) {
+//   return arr.slice().sort();
+// }
+// let arr = ['HTML', 'JavaScript', 'CSS'];
+// let sorted = copySorted(arr);
+// console.log(sorted);
 
 // let sorted = copySorted(arr);
 // console.log(sorted);
 // console.log(arr);
+
+// let user = [
+//   {name: 'Vasya'},
+//   {name: 'Petr'},
+//   {name: 'Masha'},
+// ];
+// let names = user.map( (item) => item.name);
+// console.log(names);
+
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 28 };
+
+// let users = [ vasya, petya, masha ];
+// console.log(users[0]);
+// let names = users.map(item => item.name);
+
+// console.log(names); // Вася, Петя, Маша
+
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 28 };
+
+// let users = [vasya, petya, masha];
+
+// let names = users.map( item => item.name);
+// console.log(names);
+
+// let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
+// let petya = { name: "Петя", surname: "Иванов", id: 2 };
+// let masha = { name: "Маша", surname: "Петрова", id: 3 };
+
+// let users = [ vasya, petya, masha ];
+
+// let usersMapped = users.map( user => {
+//   return (
+//     {
+//       fullName: `${user.name} ${user.surname}`,
+//       id: `${user.id}`,
+//     }
+//   )
+// }
+// );
+// console.log(usersMapped[0].fullName);
+// console.log(usersMapped[0].id);
+
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 28 };
+
+// let arr = [ vasya, petya, masha ];
+
+// function sortByAge(arr) {
+//   return arr.sort( (a, b) => a.age - b.age )
+// }
+// console.log(sortByAge(arr));
+
+// let arr = [1, 2, 3];
+
+// function shuffle(arr) {
+//   return arr.sort( () => Math.random() - 0,5)
+// }
+// console.log(shuffle(arr));
+// console.log(shuffle(arr));
+// console.log(shuffle(arr));
+// console.log(shuffle(arr));
+// console.log(shuffle(arr));
+
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 29 };
+// let kiril = { name: "Маша", age: 21 };
+// let costya = { name: "Маша", age: 22 };
+
+
+// let arr = [ vasya, petya, masha, kiril, costya ];
+
+
+// function getAverage(any) {
+//   return Math.round (any.reduce((prev, item) => prev + item.age, 0) / arr.length);
+// }
+// console.log(getAverage(arr)); 
+
+// function unique(arr) {
+//   result = [];
+//   for(let item of arr) {
+//     if(!result.includes(item)) {
+//       result.push(item)
+//     }
+//   }
+//   return result;
+// }
+
+// let strings = ["кришна", "кришна", "харе", "харе",
+//   "харе", "харе", "кришна", "кришна", ":-O"
+// ];
+
+// console.log(unique(strings));
+
+// let map = new Map();
+
+// map.set('1', 'str1');
+// map.set(1, 'num1');
+// map.set(true, 'bool1');
+
+// console.log(map.get(1));
+// console.log(map.get('1'));
+
+// console.log(map.size);
+
+// let costya = {name: 'Costya'};
+// let visitsCountMap = new Map();
+// visitsCountMap.set(costya, 123);
+// console.log(visitsCountMap.get(costya));
+
+// let john = {name: 'John'};
+// let visitsCountObj = {};
+// visitsCountObj[john] = 123;
+// console.log(visitsCountObj['[object Object]']);
+
+// let recipeMap = new Map([
+//   ['pickle', 500],
+//   ['tomato', 350],
+//   ['onion', 50]
+// ]);
+
+// for (let veg of recipeMap.keys()) {
+//   console.log(veg);
+// }
+
+// for (let amount of recipeMap.values()) {
+//   console.log(amount);
+// }
+
+// for (let entry of recipeMap.entries()) {
+//   console.log(entry);
+// }
+
+
+// let recipeMap = new Map([
+//   ['pickle', 500],
+//   ['tomato', 350],
+//   ['onion', 50]
+// ]);
+
+
+// recipeMap.forEach((value, key, map) => {
+//   console.log(`${key}: ${value}`);
+// })
+
+// let map = new Map([
+//   ['1', 'str1'],
+//   [1, 'num1'],
+//   [true, 'bool1']
+// ]);
+
+// console.log(map.get('1'));
+
+// let obj = {
+//   name: 'John',
+//   age: 30,
+// };
+
+// let map = new Map(Object.entries(obj));
+// console.log(map);
+
+// let prices = Object.fromEntries([
+//   ['banana', 1],
+//   ['orange', 2],
+//   ['meat', 4]
+// ]);
+// console.log(prices);
+// console.log(prices.orange);
+
+// let map = new Map();
+//   map.set('banana', 1);
+//   map.set('orange', 2);
+//   map.set('meat', 4);
+
+// let obj = Object.fromEntries(map) ;
+// console.log(obj.banana); 
+
+// let john = {name: 'John'};
+// let pete = {name: 'Pete'};
+// let mary = {name: 'Mary'};
+
+// let set = new Set();
+
+// set.add(john);
+// set.add(john);
+// set.add(pete);
+// set.add(pete);
+// set.add(mary);
+// set.add(mary);
+// set.add(mary);
+
+// console.log(set.size);
+// for (let user of set) {
+//   console.log(user.name);
+// }
+
+// let set = new Set(['item1', 'item2', 'item3']);
+// // for (let val of set) {
+// //   console.log(val);
+// // }
+// set.forEach((val,valAgain,set) => {
+//   console.log(val);
+// });
+
+// function unique(arr) {
+//   arr = [];
+//   let set = new Set();
+//   for (let value of arr) {
+//     if(!set.includes(value)) {
+//       arr.add(value)
+//     }
+//   }
+//   return set;
+// }
+
+// let values = ["Hare", "Krishna", "Hare", "Krishna",
+//   "Krishna", "Krishna", "Hare", "Hare", ":-O"
+// ];
+
+// console.log(unique(values));
+
+function unique(arr) {
+  return Array.from(new Set(arr));
+}
+let values = ["Hare", "Krishna", "Hare", "Krishna",
+"Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+console.log(unique(values)); 
