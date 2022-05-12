@@ -2492,14 +2492,112 @@ set.add(10).add(20).add(30).add(20)
 //   console.log(value);
 // }
 
-let prices = {
-  banana: 1,
-  orange: 2,
-  meat: 4,
-};
-let doublePrices = Object.fromEntries(
-  Object.entries(prices).map( ([key, value]) => [key, value * 2]));
+// let prices = {
+//   banana: 1,
+//   orange: 2,
+//   meat: 4,
+// };
+// let doublePrices = Object.fromEntries(
+//   Object.entries(prices).map( ([key, value]) => [key, value * 2]));
+
+// console.log(doublePrices.meat);
+
+// function sumSalaries(salaries) {
+//   let result = 0;
+//   for (let salary of Object.values(salaries)) {
+//     result = result + salary;
+//   }
+//   return result;
+// }
+
+// let salaries = {
+//   "John": 100,
+//   "Pete": 300,
+//   "Mary": 250,
+// }
+// console.log(sumSalaries(salaries));
+
+// function count(obj) {
+//   // let arr = Object.keys(obj) // ['john', 30]
+//   // // obj = [];
+//   // // for (let quantity of arr) {
+//   // //   obj.push(quantity)
+//   // // }
+//   // return arr.length;
+//   return Object.keys(obj).length
+// }
+
+// let user = {
+//   name: 'John',
+//   age: 30,
+//   age1: 30,
+//   age3: 30,
+// };
+
+// console.log(count(user));
+
+// let salaries = {
+//   "John": 100,
+//   "Pete": 300,
+//   "Mary": 250
+// };
+
+// function sumSalaries(arr) {
+//   return Object.values(arr).reduce( (prev, sum) => prev+sum, 0)
+// }
+// console.log(sumSalaries(salaries));
 
 
-  console.log(doublePrices.meat);
-  console.log(typeofdoublePrices);
+// function sumSalaries(arr) {
+//   let convertToArr = Object.keys(arr); // ["John", "Pete", "Mary"]
+//   return convertToArr.join('')
+// }
+// console.log(sumSalaries(salaries));
+
+// let arr = ['Costya', 'Vanya']
+// let [onePerson, secondPerson] = arr;
+// console.log(onePerson);
+// console.log(secondPerson);
+
+// let [firstName, surname] = 'Costya Danilov'.split(' ')
+// console.log(firstName);
+// console.log(surname);
+
+// let firstName = arr[0];
+// let surname = arr[1];
+// console.log(arr);
+
+// let [fN,,, sN] = ['a', 'b', 'c', 'd']
+// console.log(sN);
+
+// let [a, b, c] = 'abc';
+// console.log(c);
+
+// let [one, two, three] = [1, 2, 3];
+// console.log(two);
+
+// let user = {};
+// [user.name, user.surname] = 'Costya Danilov'.split(' ');
+// console.log(user);
+
+// let user = {
+//   name: "John",
+//   age: 30
+// };
+
+// for (let [keys, values] of Object.entries(user)) {
+//   console.log(`${keys}: ${values}`);
+// }
+
+// let user = new Map();
+//     user.set('name', 'John');
+//     user.set('age', '30')
+// for(let [key, value] of user) {
+//   console.log(`${key}: ${value}`);
+// }    
+
+
+// console.log(user);
+// console.log(typeof user);
+// let user = new Map();
+// console.log(user);
