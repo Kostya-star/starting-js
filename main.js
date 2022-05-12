@@ -2283,10 +2283,223 @@ console.log(num)*/
 
 // console.log(unique(values));
 
-function unique(arr) {
-  return Array.from(new Set(arr));
-}
-let values = ["Hare", "Krishna", "Hare", "Krishna",
-"Krishna", "Krishna", "Hare", "Hare", ":-O"
-];
-console.log(unique(values)); 
+// function unique(arr) {
+//   return Array.from(new Set(arr));
+// }
+// let values = ["Hare", "Krishna", "Hare", "Krishna",
+// "Krishna", "Krishna", "Hare", "Hare", ":-O"
+// ];
+// console.log(unique(values));
+
+// const obj = {
+//   name: 'Costya',
+//   age: 22,
+//   job: 'fullStackDev!',
+// }
+// const arr = [
+//   ['name', 'Costya'],
+//   ['age', 22],
+//   ['job', 'fullStackDev!!'],
+// ]
+
+// console.log(Object.entries(obj));
+// console.log(Object.fromEntries(arr));
+
+// const map = new Map(arr);
+// map
+//   .set('newField', 42)
+//   .set(obj, 'val of obj')
+
+  // // map.delete('job')
+  // console.log(map.has('job'));
+  // console.log(map.size);
+  // map.clear()
+  // console.log(map.size);
+
+
+  // const obj = {
+  //   name: 'Costya',
+  //   age: 22,
+  //   job: 'fullStackDev!',
+  // }
+
+  // const arr = [
+  //   ['name', 'Costya'],
+  //   ['age', 22],
+  //   ['job', 'fullStackDev!!'],
+  // ]
+
+  // const map = new Map(arr);
+  // map
+  //   .set('newField', 42)
+  //   .set(obj, 'val of obj')
+// for (let [key, value] of map) {
+//   console.log(key, value);
+// }   
+//  for (let val of map.values()) {
+//    console.log(val);
+//  }
+
+// for (let key of map.keys()) {
+//   console.log(key);
+// }
+
+// map.forEach( (value, key) => {
+//   console.log(value, key);
+// })
+
+// const obj = {
+//   name: 'Costya',
+//   age: 22,
+//   job: 'fullStackDev!',
+// }
+
+// const arr = [
+//   ['name', 'Costya'],
+//   ['age', 22],
+//   ['job', 'fullStackDev!!'],
+// ]
+
+// const map = new Map(arr);
+// map
+//   .set('newField', 42)
+//   .set(obj, 'val of obj')
+
+// const array = [...map]
+// console.log(array);  
+
+// const array = Array.from(map)
+// const mapObj = Object.fromEntries(map)
+// console.log(mapObj);  
+
+// const users = [
+//   {name: 'Elena'},
+//   {name: 'Alex'},
+//   {name: 'Irina'},
+// ]
+
+// const visits = new Map()
+
+// visits
+//   .set(users[0], new Date())
+//   .set(users[1], new Date(new Date().getTime() + 1000 * 60))
+//   .set(users[2], new Date(new Date().getTime() + 10000 * 60))
+
+// function lastVisit(user) {
+//   return visits.get(user)
+// }  
+
+// console.log(lastVisit(users[0]));
+
+const set = new Set([1, 2, 3, 3, 3, 4, 5, 5, 6])
+
+set.add(10).add(20).add(30).add(20)
+// console.log(set);
+
+// console.log(set.has(0));
+// console.log(set.size);
+// console.log(set.delete(1)); 
+// console.log(set.size);
+// console.log(set.clear());
+// console.log(set);
+
+// console.log(set.entries());
+// for (let key of set) {
+//   console.log(key);
+// }
+
+// function uniqueVal(array) {
+//   return Array.from(new Set(array))
+// }
+// console.log(uniqueVal([1,2,3,4,5,7,4,3,2,3,45,6,6,3,3,32,4,56,5]));
+
+// function unique(arr) {
+//   return result = Array.from(new Set(arr))
+// }
+// let values = ["Hare", "Krishna", "Hare", "Krishna",
+//   "Krishna", "Krishna", "Hare", "Hare", ":-O"
+// ];
+// let num = [1,1,1,1,1,1,1,1,1,1,1,1,1]
+// console.log(unique(num));
+
+// function aclean(arr) {
+//   let result = [];
+//   let set = new Set(arr)
+//   for(let value of set) {
+//     if (!set.has(arr[value])) {
+//       set.add(value)
+//     }
+//   }
+//   return result;
+// }
+
+// function aclean(arr) {
+//   let map = new Map();
+
+//   for (let word of arr) {
+//     let sorted = word.toLowerCase().split('').sort().join('');
+//     map.set(sorted, word);
+//   }
+//   return Array.from(map.values());
+// }
+// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+// console.log(aclean(arr));
+
+// function aclean(arr) {
+//   let obj = {};
+
+//   for (let i = 0; i < arr.length; i++) {
+//     let sorted = arr[i].toLowerCase().split('').sort().join('');
+//     obj[sorted] = arr[i];
+//   }
+//   return Object.values(obj);
+// }
+
+// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+// console.log(aclean(arr));
+
+// let map = new Map();
+// map.set('name', 'John');
+// let keys = map.keys();
+// // keys.push('more')
+// console.log(map);
+
+// let map = new Map();
+// map.set('name', 'John');
+// let keys = Array.from(map.keys())
+// keys.push('more')
+// console.log(keys);
+// console.log(map.has(''));
+
+// console.log(Array.from(['foo']));
+// console.log(Array.from([1, 2, 3], x => x+x));
+// let num = Array.from('foo');
+// console.log(typeof num);
+
+// let obj = {name: 'Costya',
+// age: 22,
+// city: 'Bender',}
+// console.log(Object.keys(obj));
+// console.log(Object.values(obj));
+// console.log(Object.entries(obj));
+
+// let user = {
+//   name: 'John',
+//   age: 30,
+// };
+
+// for (let value of Object.values(user)) {
+//   console.log(value);
+// }
+
+let prices = {
+  banana: 1,
+  orange: 2,
+  meat: 4,
+};
+let doublePrices = Object.fromEntries(
+  Object.entries(prices).map( ([key, value]) => [key, value * 2]));
+
+
+  console.log(doublePrices.meat);
+  console.log(typeofdoublePrices);
