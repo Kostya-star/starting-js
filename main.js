@@ -2716,16 +2716,112 @@ set.add(10).add(20).add(30).add(20)
 // ({title: t, height: h, width: w} = {title: 'Menu', width: 200, height: 100});
 // console.log(h);
 
-let options = {
-  size: {
-    width: 100,
-    height: 200
-  },
-  items: ["Cake", "Donut"],
-  extra: true
-};
+// let options = {
+//   size: {
+//     width: 100,
+//     height: 200
+//   },
+//   items: ["Cake", "Donut"],
+//   extra: true
+// };
 
-let {size: {width, height}, items: [item1, item2]} = options;
-console.log(width);
-console.log(height);
-console.log(item1);
+// let {size: {width, height}, items: [item1, item2]} = options;
+// console.log(width);
+// console.log(height);
+// console.log(item1);
+
+// let options = {
+//   title: "My menu",
+//   items: ["Item1", "Item2"]
+// };
+
+// function showMenu({title = 'untitled', width = 200, height = 100, items = []}) {
+//   console.log( `${title} ${width} ${height}` );
+//   console.log( items );
+// }
+// showMenu(options)
+
+// let options = {
+//   title: "My menu",
+//   items: ["Item1", "Item2"]
+// };
+
+// function showMenu({
+//   title = 'Untitled',
+//   width: w = 100,
+//   height: h = 200,
+//   items: [item1, item2],
+// }) {
+//   console.log( `${title} ${w} ${h}`);
+//   console.log(item1);
+//   console.log(item2);
+// }
+// showMenu(options)
+
+// function showMenu( {title = 'Menu', width = 100, height = 200} = {} ) {
+//   console.log( `${title} ${width} ${height}`);
+  
+// }
+// showMenu()
+
+// let user = {
+//   name: "John",
+//   years: 30
+// };
+
+// let {name, years: age, isAdmin = false} = user;;
+// console.log(years);
+
+
+// function topSalary(salaries) {
+  //     let arrMax = [];
+  
+  //     for (let [name, salary] of Object.entries(salaries)) {
+    //         if (![name, salary]) return null
+    //         arrMax.push(salary)
+    //       }
+    
+    //       return ( 
+      //           'the highest salary in the company is:' + Math.max.apply(null, arrMax)
+      //           );
+      //       }
+      
+      //       console.log(topSalary(salaries)); 
+      
+      // function topSalary(salaries) {
+        
+        //   let max = 0;
+        //   let maxName = null;
+        
+        //   for(let [name, salary] of Object.entries(salaries)) {
+          //     if (salary > max) {
+            //       max = salary;
+            //       maxName = name;
+            //     }
+            //   }
+            
+            //   return maxName;
+            // }
+            // console.log(topSalary(salaries));
+
+// let salaries = {
+//   "John": 100,
+//   "Pete": 300,
+//   "Mary": 250,
+// };
+
+// function topSalary(salaries) {
+
+//   maxSalary = 0;
+//   maxName = null;
+
+//   for (let [name, salary] of Object.entries(salaries)) {
+//     if (salary > maxSalary) {
+//       maxSalary = salary;
+//       maxName = name;
+//     }
+//   }
+//   return 'the most paid worker of the company is: ' + maxName 
+//           + ' and he makes: ' + maxSalary;
+// }
+// console.log(topSalary(salaries));
