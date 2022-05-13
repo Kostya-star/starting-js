@@ -2601,3 +2601,131 @@ set.add(10).add(20).add(30).add(20)
 // console.log(typeof user);
 // let user = new Map();
 // console.log(user);
+
+// let arr = ['Costya', 'Danilov'];
+// let [firstName, surname] = arr;
+
+// let[firstName, surname] = 'Costya Danilov'.split(' ');
+
+// let [firstName,, surname] = ['Costya', 'nobody', 'Danilov', 'brodilov'];
+// console.log(surname);
+
+// let [a, b, c] = 'abc'
+// console.log(b);
+
+// let [one, two, three] = [1, 2, 3]
+// console.log(two);
+
+// let obj = {};
+// [obj.name, obj.surname] = 'Costya Danilov'.split(' ');
+// console.log(obj.name);
+
+// let user = {
+//   name: 'Costya',
+//   age: 22,
+// };
+// for (let [key, value] of Object.entries(user)) {
+//   console.log(`${key}: ${value}`);
+// }
+
+// let user = new Map();
+//     user.set('name', 'John');
+//     user.set('age', '30');
+//     console.log(user);
+
+// for (let [key, value] of user) {
+//   console.log(`${key}: ${value}`);
+// }    
+
+// let user = new Map([['name', 'John'], ['age' ,'30']]);
+
+//     console.log(user);
+
+// let [name1, name2, ...rest] = ['Costya', 'Danilov', 'successful', 'developer'];
+// console.log(rest[0]);
+// console.log(rest[1]);
+// console.log(rest.length);
+
+// let [name = 'Guest', surname = 'Anon'] = ['Costya'];
+// console.log(name);
+
+// let [name = prompt('name?'), surname = prompt('surname?')] = ['Costya'];
+// console.log(name);
+// console.log(surname);
+
+// let person = {
+//   name: 'Costya',
+//   surname: 'Danilov',
+//   age: 22,
+// }
+
+// let {surname, age, name} = person;
+
+// console.log(surname, name, age);
+
+// let person = {
+//   name: 'Costya',
+//   surname: 'Danilov',
+//   age: 22,
+// }
+
+// let {name: n, age: a, surname} = person;
+// console.log(surname);
+
+// let person = {
+//   name: 'Costya',
+// };
+
+// let {name, height = 185, weight = 75} = person;
+// console.log(weight);
+
+// let person = {};
+
+// let { name = prompt('name?'), surname = prompt('surname?') } = person;
+// console.log(name);
+// console.log(surname);
+
+// let person = {
+//   name: 'Costya',
+// };
+// let {name: n = Costya, surname: s = prompt('whats your surname?'), age: a = prompt('how old r u?')} = person;
+// console.log(n);
+// console.log(s);
+// console.log(a);
+
+// let options = {
+//   title: "Menu",
+//   width: 100,
+//   height: 200
+// };
+
+// let {title, ...rest} = options;
+// console.log(title);
+// console.log(rest.height);
+
+// let options = {
+//   title: "Menu",
+//   width: 100,
+//   height: 200
+// };
+
+// let {title, ...rest} = options;
+// console.log(rest.height);
+
+// let title, width, height;
+// ({title: t, height: h, width: w} = {title: 'Menu', width: 200, height: 100});
+// console.log(h);
+
+let options = {
+  size: {
+    width: 100,
+    height: 200
+  },
+  items: ["Cake", "Donut"],
+  extra: true
+};
+
+let {size: {width, height}, items: [item1, item2]} = options;
+console.log(width);
+console.log(height);
+console.log(item1);
