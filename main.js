@@ -2825,3 +2825,211 @@ set.add(10).add(20).add(30).add(20)
 //           + ' and he makes: ' + maxSalary;
 // }
 // console.log(topSalary(salaries));
+
+// let now = new Date();
+// console.log(now);
+
+// let jan01_1970 = new Date(0);
+// console.log(jan01_1970);
+
+// let jan02_1970 = new Date(24 * 3600 * 1000);
+// console.log(jan02_1970);
+
+// let Dec31_1969 = new Date(-24 * 3600 * 1000)
+// console.log(Dec31_1969);
+
+// let a = new Date(0)
+// console.log(a);
+
+// let date = new Date(2022,04,14,11,16,23);
+// console.log(date);
+
+// let date = new Date();
+// console.log( date.getHours() );
+// console.log( date.getUTCHours() );
+// console.log( date.getTime() );
+// 1652516982827
+
+// console.log(new Date().getTimezoneOffset());
+
+// let today = new Date();
+// today.setHours(0,0,0,0);
+// console.log(today);
+
+// let date = new Date(2013, 0, 36)
+// console.log(date);
+
+// let date = new Date(2022, 04, 14);
+// date.setDate(date.getDate() + 1);
+// console.log(date);
+
+// let date = new Date();
+// date.setSeconds(date.getSeconds() + 70);
+// console.log(date);
+
+// let date = new Date();
+// date.setDate(0);
+// console.log(date);
+
+// let date = new Date();
+// console.log(+date);
+
+// let start = new Date();
+// for (let i = 0; i < 1000; i++) {
+//   let dosmth = i * i * i;
+// }
+// let end = new Date();
+// console.log( ` ${end - start} `);
+
+// let start = Date.now()
+// let end = Date.now()
+// console.log(start-end);
+
+// let date = new Date();
+// date.getTime();
+// console.log(date);
+
+// let date = Date.now();
+// console.log(date);
+
+// function diffGetTime(date1, date2) {
+//   return date2.getTime() - date1.getTime();
+// }
+// console.log(diffGetTime(date1, date2));
+
+// let date = Date.parse('2022-04-14')
+// console.log(date);
+
+// let date = new Date( Date.parse('2022-05-14') )
+// console.log(date);
+
+
+
+
+
+// function addZero(d) {
+  //   return (d<10) ? '0' + d : d;
+  // }
+
+// let arrWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
+// function currentUserTime(t = new Date()) {
+//   let Y = t.getFullYear();
+//   let M = addZero(t.getMonth() + 1);
+//   let D = addZero(t.getDate());  
+//   let d = arrWeek[t.getDay()];
+//   let h = addZero(t.getHours());
+//   let m = addZero(t.getMinutes());
+//   console.log(Y, M, D, d, h, m);
+
+//   return `${Y}.${M}.${D} ${h}:${m} (${d})`;
+// }
+// console.log(currentUserTime(new Date())); 
+// console.log(Date.now());
+
+// console.log(new Date(2012,01,20)); 
+
+// function getWeekDay(date) {
+  //   let arrWeekDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+  //   return arrWeekDay[date.getDay()]
+  // }
+  // let date = new Date(2022,04,14);
+  // console.log(getWeekDay(date));
+  
+  // let date = new Date(2022, 0, 3);
+  
+  // function getLocalDay(date) {
+    //   let currentDay = date.getDay();
+    //   if (currentDay == 0) {
+      //     day = 7;
+      //   }
+      //   return currentDay;
+      // }
+      // console.log(getLocalDay(date)); 
+
+
+      // ///////////////////////////////////////////
+      // const date = new Date();
+      // console.log(date.getFullYear());
+      // console.log(date.getMonth()); //current month[0]...[11]
+      // console.log(date.getDate()); // curent date 1...31
+      // console.log(date.getDay()); //current day (sunday[0]-saturday[6])
+      // console.log(date.getHours());
+      // console.log(date.getMinutes());
+      // console.log(date.getSeconds());
+      // console.log(date.getTime());
+      // console.log(Date.now());
+      ///////////////////////////////////////////
+
+
+//   let date = new Date(2015, 0, 2);
+      
+//   function getDateAgo(date, days) {
+//    let dateCopy = new Date(date);
+//     dateCopy.setDate(date.getDate() - days)
+//     return dateCopy.getDate();
+//   } 
+// console.log(getDateAgo(date, 1));
+
+// console.log(Date.now());
+
+// function getLastDayOfMonth(year, month) {
+//   let date = new Date(year, month + 1, 0)
+//   return date.getDate().getDay()
+// }
+// console.log(getLastDayOfMonth(2022, 4));
+// function getSecondsToday() {
+//   let today = new Date();
+//   return today.getHours() * 3600 + today.getMinutes() * 60 + today.getSeconds();
+  
+// }
+// console.log(getSecondsToday());
+
+// function getSecondsToday() {
+//   let now = new Date();
+//   let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+//   let diff = now - today;
+//   return Math.round(diff / 1000);  
+//   console.log(today);
+// }
+// console.log(getSecondsToday());
+
+// function secondsTillTmrw() {
+//   let timeRn = new Date();
+//   let dateTmrw = new Date(timeRn.getFullYear(), timeRn.getMonth(), timeRn.getDate() + 1)
+//   let diff = (dateTmrw - timeRn) / 1000;
+//   return Math.round(diff);
+// }
+// console.log(secondsTillTmrw());
+
+function formatDate(date) {
+  let dayOfMonth = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getFullYear();
+  let hour = date.getHours();
+  let minutes = date.getMinutes();
+  let diffMs = new Date() - date;
+  let diffSec = Math.round(diffMs /1000);
+  let diffMin = diffSec / 60;
+  let diffHour = diffMin / 60;
+
+  year = year.toString().slice(-2);
+  month = month <10 ? '0' + month : month;
+  dayOfMonth = dayOfMonth < 10 ? '0' + dayOfMonth : dayOfMonth;
+  hour = hour < 10 ? '0' + hour : hour;
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+
+  if (diffSec < 1) {
+    return 'right away!';
+  }else if (diffMin < 1) {
+    return `${diffSec} a sec ago`;
+  } else if (diffHour < 1) {
+    return `${diffMin} a min ago`;
+  } else {
+    return `${dayOfMonth}.${month}.${year} ${hour}: ${minutes}`
+  }
+}
+alert( formatDate(new Date(new Date - 1)) );
+alert( formatDate(new Date(new Date - 30 * 1000)) );
+alert( formatDate(new Date(new Date - 5 * 60 * 1000)) );
+alert( formatDate(new Date(new Date - 86400 * 1000)) );
