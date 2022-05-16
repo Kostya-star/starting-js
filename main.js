@@ -3002,34 +3002,399 @@ set.add(10).add(20).add(30).add(20)
 // }
 // console.log(secondsTillTmrw());
 
-function formatDate(date) {
-  let dayOfMonth = date.getDate();
-  let month = date.getMonth() + 1;
-  let year = date.getFullYear();
-  let hour = date.getHours();
-  let minutes = date.getMinutes();
-  let diffMs = new Date() - date;
-  let diffSec = Math.round(diffMs /1000);
-  let diffMin = diffSec / 60;
-  let diffHour = diffMin / 60;
+// function formatDate(date) {
+//   let dayOfMonth = date.getDate();
+//   let month = date.getMonth() + 1;
+//   let year = date.getFullYear();
+//   let hour = date.getHours();
+//   let minutes = date.getMinutes();
+//   let diffMs = new Date() - date;
+//   let diffSec = Math.round(diffMs /1000);
+//   let diffMin = diffSec / 60;
+//   let diffHour = diffMin / 60;
 
-  year = year.toString().slice(-2);
-  month = month <10 ? '0' + month : month;
-  dayOfMonth = dayOfMonth < 10 ? '0' + dayOfMonth : dayOfMonth;
-  hour = hour < 10 ? '0' + hour : hour;
-  minutes = minutes < 10 ? '0' + minutes : minutes;
+//   year = year.toString().slice(-2);
+//   month = month <10 ? '0' + month : month;
+//   dayOfMonth = dayOfMonth < 10 ? '0' + dayOfMonth : dayOfMonth;
+//   hour = hour < 10 ? '0' + hour : hour;
+//   minutes = minutes < 10 ? '0' + minutes : minutes;
 
-  if (diffSec < 1) {
-    return 'right away!';
-  }else if (diffMin < 1) {
-    return `${diffSec} a sec ago`;
-  } else if (diffHour < 1) {
-    return `${diffMin} a min ago`;
-  } else {
-    return `${dayOfMonth}.${month}.${year} ${hour}: ${minutes}`
-  }
-}
-alert( formatDate(new Date(new Date - 1)) );
-alert( formatDate(new Date(new Date - 30 * 1000)) );
-alert( formatDate(new Date(new Date - 5 * 60 * 1000)) );
-alert( formatDate(new Date(new Date - 86400 * 1000)) );
+//   if (diffSec < 1) {
+//     return 'right away!';
+//   }else if (diffMin < 1) {
+//     return `${diffSec} a sec ago`;
+//   } else if (diffHour < 1) {
+//     return `${diffMin} a min ago`;
+//   } else {
+//     return `${dayOfMonth}.${month}.${year} ${hour}: ${minutes}`
+//   }
+// }
+// alert( formatDate(new Date(new Date - 1)) );
+// alert( formatDate(new Date(new Date - 30 * 1000)) );
+// alert( formatDate(new Date(new Date - 5 * 60 * 1000)) );
+// alert( formatDate(new Date(new Date - 86400 * 1000)) );
+
+// let user = {
+//   name: 'Costya',
+//   age: 22,
+//   toString() {
+//     return `{name: '${this.name}', age: ${this.age}}`;
+//   }
+// };
+// console.log(user);
+
+// let student = {
+//   name: 'John',
+//   age: 30,
+//   isAdmin: false,
+//   courses: ['html', 'css', 'js'],
+//   wife: null
+// };
+// let json = JSON.stringify(student);
+// console.log(json);
+
+// let user = {
+//   sayHi() { // будет пропущено
+//     alert("Hello");
+//   },
+//   [Symbol("id")]: 123, // также будет пропущено
+//   something: undefined // как и это - пропущено
+// };
+// console.log(JSON.stringify(user));
+
+// let meetup = {
+//   title: "Conference",
+//   room: {
+//     number: 23,
+//     participants: ["john", "ann"]
+//   }
+// };
+// console.log(JSON.stringify(meetup));
+
+// let room = {
+//   number: 23
+// };
+
+// let meetup = {
+//   title: "Conference",
+//   participants: [{name: "John"}, {name: "Alice"}],
+//   place: room // meetup ссылается на room
+// };
+
+// room.occupiedBy = meetup; // room ссылается на meetup
+// console.log( JSON.stringify(meetup, ['title', 'participants', 'place', 'name', 'number']) );
+
+// let room = {
+//   number: 23
+// };
+
+// let meetup = {
+//   title: "Conference",
+//   participants: [{name: "John"}, {name: "Alice"}],
+//   place: room // meetup ссылается на room
+// };
+
+// room.occupiedBy = meetup; // room ссылается на meetup
+
+// console.log( JSON.stringify(meetup, function replacer(key, value) {
+//   console.log(`${key}: ${value}`);
+//   return (key === 'occupiedBy') ? undefined : value;
+// }));
+// let user = {
+//   name: "John",
+//   age: 25,
+//   roles: {
+//     isAdmin: false,
+//     isEditor: true
+//   }
+// };
+// console.log( JSON.stringify(user, null, 2));
+
+// let room = {
+//   number: 23
+// };
+
+// let meetup = {
+//   title: "Conference",
+//   date: new Date(Date.UTC(2017, 0, 1)),
+//   room
+// };
+// console.log( JSON.stringify(meetup));
+
+// let room = {
+//   number: 23,
+//   toJSON() {
+//     return this.number;
+//   }
+// };
+
+// let meetup = {
+//   title: "Conference",
+//   room
+// };
+
+// console.log( JSON.stringify((room)));
+// console.log(JSON.stringify(meetup));
+
+// let numbers = '[0,1,2,3]';
+// numbers = JSON.parse(numbers);
+// console.log(numbers);
+
+// let user = '{ "name": "John", "age": 35, "isAdmin": false, "friends": [0,1,2,3] }';
+// user = JSON.parse(user);
+// console.log(user.friends[3]);
+
+// let str = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
+// let meetup = JSON.parse(str);
+// console.log( meetup.date.getDate() );
+
+// let str = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
+// let meetup = JSON.parse(str, function(key, value) {
+//   if (key == 'date') return new Date(value);
+//   return value;
+// })
+// console.log(meetup.date.getDate());
+
+// let schedule = `{
+//   "meetups": [
+//     {"title":"Conference","date":"2017-11-30T12:00:00.000Z"},
+//     {"title":"Birthday","date":"2017-04-18T12:00:00.000Z"}
+//   ]
+// }`;
+
+// schedule = JSON.parse(schedule, function(key, value) {
+//   if (key == 'date') return new Date(value);
+//   return value;
+// });
+// console.log( schedule.meetups[1].date.getDate() );
+
+// let user = {
+//   name: "Василий Иванович",
+//   age: 35
+// };
+
+// let user2 = JSON.parse(JSON.stringify(user))
+// console.log(user2);
+// let toJson = JSON.stringify(user);
+// let fromJson = JSON.parse(toJson)
+// console.log(fromJson);
+
+// let room = {
+//   number: 23
+// };
+
+// let meetup = {
+//   title: "Совещание",
+//   occupiedBy: [{name: "Иванов"}, {name: "Петров"}],
+//   place: room
+// };
+
+// цикличные ссылки
+// room.occupiedBy = meetup;
+// meetup.self = meetup;
+
+// console.log( JSON.stringify(meetup, function replacer(key, value) {
+//   console.log( `${key}: ${value}`);
+//   return (key === 'self' || key === 'occupiedBy') ? undefined : value;
+// }) );
+
+// console.log( JSON.stringify(meetup, function replacer(key, value) {
+//   return (key != "" && value == meetup) ? undefined : value;
+// }));
+
+
+// let room = {
+//   number: 23
+// };
+
+// let meetup = {
+//   title: "Conference",
+//   participants: [{name: "John"}, {name: "Alice"}],
+//   place: room // meetup ссылается на room
+// };
+
+// room.occupiedBy = meetup; // room ссылается на meetup
+// console.log(JSON.stringify(meetup, ['title', 'participants', 'name']));
+
+// function pow(x, n) {
+//   let result = 1;
+//   for (let i = 0; i < n; i++) {
+//     result = result * x;
+//   }
+//   return result;
+// }
+// console.log( pow(2, 2) );
+
+// function pow(x, n) {
+//   if (n === 1) {
+//     return x;
+//   } else {
+//     return x * pow(x, n - 1);
+//   }
+// }
+// console.log( pow(2, 3) );
+
+// function pow(x, n) {
+//   return (n === 1) ? x : (x * pow(x, n - 1));
+// }
+// console.log( pow(2, 3) );
+
+// let company = { // тот же самый объект, сжатый для краткости
+//   sales: [{name: 'John', salary: 1000}, {name: 'Alice', salary: 600 }],
+//   development: {
+//     sites: [{name: 'Peter', salary: 2000}, {name: 'Alex', salary: 1800 }],
+//     internals: [{name: 'Jack', salary: 1300}]
+//   }
+// };
+
+// function sumSalaries(department) {
+//   if (Array.isArray(department)) {
+//     return department.reduce( (prev, item) => prev + item.salary, 0); 
+//   } else {
+//     let sum = 0;
+//     for (let subdep of Object.values(department)) {
+//       sum = sumSalaries(subdep);
+//     }
+//     return sum;
+//   }
+// }
+// console.log(sumSalaries(company));
+
+// function sumTo(n) {
+//   result = 0;
+//   for(let i = 1; i <= n; i++) {
+//     result += i;
+//   }
+//   return result;
+// }
+// console.log(sumTo(5));
+
+// function sumTo(n) {
+//   if (n == 1) return 1;
+//   return n + sumTo(n - 1)
+// }
+// console.log(sumTo(4));
+
+// function sumTo(n) {
+//   return n * (n + 1) / 2;
+// }
+// console.log(sumTo(2));
+
+// function factorial(n) {
+//   return (n === 1) ? 1 :  n * factorial(n - 1);
+// }
+// console.log(factorial(5));
+
+// function factorial(n) {
+//   console.log(Boolean(0));
+//   return n ? n * factorial(n - 1) : 25;
+// }
+
+// console.log( factorial(1) ); // 120
+
+// function factorial(n) {
+//   let result = 1;
+//   for(let i = n; i >= 1; i--) {
+//     result *= i;
+//   } 
+//   return result;
+// }
+// console.log( factorial(2));
+
+// function fib(n) {
+//   return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+// }
+// console.log(fib(3));
+
+// function fib(n) {
+//   let a = 1;
+//   let b = 1;
+//   for (let i = 3; i <= n; i++) {
+//     let c = a + b;
+//     a = b;
+//     b = c;
+//   }
+//   return b;
+// }
+// console.log(fib());
+
+// let list = {
+//   value: 1,
+//   next: {
+//     value: 2,
+//     next: {
+//       value: 3,
+//       next: {
+//         value: 4,
+//         next: null
+//       }
+//     }
+//   }
+// };
+
+// function printList(list) {
+//   let a = list;
+
+//   while(a) {
+//     console.log(a.value);
+//   }
+// }
+
+// printList(list)
+
+// function printList(list) {
+//   console.log(list.value);
+
+//   if(list.next) {
+//     printList(list.next)
+//   }
+// }
+// printList(list);\
+
+// let list = {
+//   value: 1,
+//   next: {
+//     value: 2,
+//     next: {
+//       value: 3,
+//       next: {
+//         value: 4,
+//         next: null
+//       }
+//     }
+//   }
+// };
+//  function printReverseList(list) {
+//    if(list.next) {
+//      printReverseList(list.next);
+//    }
+//    console.log(list.value);
+//  }
+//  printReverseList(list)
+
+// let list = {
+//   value: 1,
+//   next: {
+//     value: 2,
+//     next: {
+//       value: 3,
+//       next: {
+//         value: 4,
+//         next: null
+//       }
+//     }
+//   }
+// };
+// function printReverse(list) {
+//   let arr = [];
+//   let tmp = list;
+
+//   while (tmp) {
+//     arr.push(tmp.value);
+//     tmp = tmp.next;
+//   }
+//   for(let i = arr.length - 1; i >= 0; i--) {
+//     console.log(arr[i]);
+//   }
+// }
+// printReverse(list);
