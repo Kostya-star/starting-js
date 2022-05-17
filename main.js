@@ -3398,3 +3398,227 @@ set.add(10).add(20).add(30).add(20)
 //   }
 // }
 // printReverse(list);
+
+// function sum(a, b) {
+//   return a + b;
+// }
+// console.log(sum(45,5,3,4,5,6));
+
+// function sumAll(...args) {
+//   let sum = 0;
+//   for(let item of args) {
+//     sum = sum + item;
+//   }
+//   return sum;
+// }
+// console.log(sumAll(1,2,3));
+
+// function showName(firstName, lastName, ...rest) {
+//   console.log(firstName + ' ' + lastName);
+//   console.log(rest[0]);
+//   console.log(rest[1]);
+//   console.log(rest.length);
+// }
+// showName('Costya', 'Danilov', 'Petrovich', 'blablabla')
+
+// function showName() {
+//   console.log(arguments.length);
+//   console.log(arguments[0]);
+//   console.log(arguments[1]);
+// }
+// showName('Costya', 'Danilov');
+// showName('Costya');
+
+// function f() {
+//   let showArg = () => console.log(arguments[0]);
+//   showArg(2);
+// }
+// f(3);
+
+// console.log(Math.max(3, 5, 1));
+
+// let arr = [3,5,1];
+// console.log(Math.max(...arr));
+
+// let arr1 = [1, -2, 3, 4];
+// let arr2 = [8, 3, -8, 1];
+// console.log(Math.max(...arr1, ...arr2));
+
+// let arr1 = [1, -2, 3, 4];
+// let arr2 = [8, 3, -8, 1];
+// console.log(Math.max(...arr1, ...arr2, 25));
+
+// let arr = [3, 5, 1];
+// let arr2 = [8, 9, 15];
+
+// let merged = [...arr, ...arr2];
+// console.log(merged);
+
+// let str = 'Hello!';
+// console.log([...str]);
+
+// let str = 'Hello!';
+// console.log(Array.from(str));
+
+// let name = 'John';
+
+// function sayHi() {
+//   console.log('Hi, ' + name);
+// }
+// name = 'Pete';
+// sayHi();
+
+// function makeWorker() {
+//   let name = 'Pete';
+
+//   return function() {
+//     console.log(name);
+//   }
+  
+// }
+// let name = 'John';
+
+// let work = makeWorker();
+// work();
+
+// let phrase = 'Hello!';
+// function sayHi(name) {
+//   console.log( `${phrase}, ${name}`);
+// }
+// sayHi('Costya');
+
+// function sayHiBye(fN, lN) {
+//   function fullN() {
+//     fN = 'Costya';
+//     lN = 'Danilov';
+//     return fN + ' ' + lN;
+//   }
+//   console.log( 'Hello, ' + fullN() )
+//   console.log( 'Bye, ' + fullN() )
+// }
+// sayHiBye()
+
+// function user(name) {
+
+//   this.sayHi = function() {
+//     console.log(name);
+//   };
+// }
+
+// let person = user("John");
+// user.sayHi(); 
+
+// function makeCounter() {
+//   let count = 0;
+//   return function() {
+//     return count++;
+//   };
+// }
+// let counter = makeCounter()
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// {
+//   let sms = 'Hello!';
+//   console.log(sms);
+// }
+// console.log(sms);
+
+// function f() {
+//   let value = Math.random();
+
+//   function g() {
+//     debugger; // в консоли: напишите alert(value); Такой переменной нет!
+//   }
+
+//   return g;
+// }
+
+// let g = f();
+// g();
+
+// let value = "Сюрприз!";
+
+// function f() {
+//   let value = "ближайшее значение";
+
+//   function g() {
+//     debugger; // в консоли: напишите alert(value); Сюрприз!
+//   }
+
+//   return g;
+// }
+
+// let g = f();
+// g();
+
+// function counter() {
+//   let count = 0;
+
+//   return function a() {
+//     return ++count;
+//   }
+// }
+// let counter1 = counter();
+// console.log(counter1());
+// console.log(counter1());
+// 'use strict'
+// let phrase = "Hello";
+
+// if (true) {
+//   let user = "John";
+
+//   function sayHi() {
+//     alert(`${phrase}, ${user}`);
+//   };
+// };
+
+// sayHi();
+
+// function sum(a) {
+//   return function(b) {
+//     return a + b;
+//   }
+// }
+// console.log(sum(3)(2));
+
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+
+// function inBetween(a, b) {
+//   return function(x) {
+//     return x >= a && x <= b;
+//   };
+// }
+// console.log( arr.filter(inBetween(3,6 )) ); 
+
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+
+// function inArray(arr) {
+//   return function(x) {
+//     return arr.includes(x)
+//   };
+// }
+// console.log( arr.filter(inArray([1,2,3,45,82])));
+
+let users = [
+  { name: "John", age: 20, surname: "Johnson" },
+  { name: "Pete", age: 18, surname: "Peterson" },
+  { name: "Ann", age: 19, surname: "Hathaway" }
+];
+
+function byField(a, b, c) {
+  // let users1 =[]
+  // for(let i = 0; i < users.length; i++){
+  //   users1.push(users[i])
+  //   a = 
+  //   b = 
+  //   c = 
+  // }
+  // if ()
+
+  for (let item of Object.entries(users)) {
+    console.log(item);
+  }
+}
+byField()
