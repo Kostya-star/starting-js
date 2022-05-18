@@ -1,4 +1,4 @@
-
+// 'use strict';
 // const todos = [
 //   {
 //     id: 1,
@@ -3601,24 +3601,321 @@ set.add(10).add(20).add(30).add(20)
 // }
 // console.log( arr.filter(inArray([1,2,3,45,82])));
 
-let users = [
-  { name: "John", age: 20, surname: "Johnson" },
-  { name: "Pete", age: 18, surname: "Peterson" },
-  { name: "Ann", age: 19, surname: "Hathaway" }
-];
+// let users = [
+//   { name: "John", age: 20, surname: "Johnson" },
+//   { name: "Pete", age: 18, surname: "Peterson" },
+//   { name: "Ann", age: 19, surname: "Hathaway" }
+// ];
 
-function byField(a, b, c) {
-  // let users1 =[]
-  // for(let i = 0; i < users.length; i++){
-  //   users1.push(users[i])
-  //   a = 
-  //   b = 
-  //   c = 
-  // }
-  // if ()
+// function byField(a, b, c) {
+//   // let users1 =[]
+//   // for(let i = 0; i < users.length; i++){
+//   //   users1.push(users[i])
+//   //   a = 
+//   //   b = 
+//   //   c = 
+//   // }
+//   // if ()
 
-  for (let item of Object.entries(users)) {
-    console.log(item);
+//   for (let item of Object.entries(users)) {
+//     console.log(item);
+//   }
+// }
+// byField()
+
+// b = 20;
+// function hey() {
+//   a = 10;
+//   var b = 15;
+// }
+// hey();
+// console.log(a + b);
+
+// function createGreeting() {
+//   let message = 'Hello';
+
+//   return function(str) {
+//     console.log(message, str);
+//   }
+// }
+// let helloWorld = createGreeting();
+// helloWorld('world');
+// helloWorld('John');
+
+// function addByX(num) {
+//   return function(x) {
+//     return num + x;
+//   }
+// }
+
+// let addByTwo = addByX(2);
+// let addByFive = addByX(5);
+
+// console.log(addByTwo(3));
+// console.log(addByFive(3));
+
+// function makeCounter(count) {
+//   return function() {
+//     return count++;
+//   }
+// }
+// let counter = makeCounter(20);
+// let counter1 = makeCounter(30);
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// console.log(counter1());
+// console.log(counter1());
+// console.log(counter1());
+
+// let phrase = "Hello";
+
+// if (true) {
+//   let user = "John";
+
+//   function sayHi() {
+//     console.log(`${phrase}, ${user}`);
+//   }
+// }
+
+// sayHi();
+
+// function sum(a) {
+//   function two(b) {
+//     return function(c) {
+//       return a + b + c;
+//     }
+//   }
+// }
+// // let sum1 = sum(1)
+// // console.log(sum1(1));
+// let sum1 = sum(two(1)) 
+// console.log(sum1(2)(3));
+
+let arr = [1, 2, 3, 4, 5, 6, 7];
+//  ========================================
+function inBetween(a, b) {
+  return function(x) {
+    return x >= a && x <= b; 
   }
 }
-byField()
+console.log(arr.filter(inBetween(3, 6)));
+// ============================================
+
+// function inArray(arr) {
+//   return function(item) {
+//     return arr.includes(item);
+//   }
+// }
+// console.log(arr.filter(inArray([1, 2, 3,4,5,78,9,4,45])));
+
+// let users = [
+//   { name: "John", age: 20, surname: "Johnson" },
+//   { name: "Pete", age: 18, surname: "Peterson" },
+//   { name: "Ann", age: 19, surname: "Hathaway" }
+// ];
+
+// function byField(field) {
+//   return function(a, b) {
+//     return a[field] > b[field] ? 1 : -1;
+//   }
+// }
+// users.sort(byField('name'))
+//       .forEach(user => console.log(user.name));
+
+// let sorted = users.sort(byField('age'))
+//       .forEach(user => console.log(user.name + ' ' + user.age));   
+
+// function makeArmy() {
+//   let shooters = [];
+
+//   for(let i = 0; i < 10; i++) {
+//     let shooter = function() {
+//       console.log(i);
+//     };
+//     shooters.push(shooter);
+//   }
+//   return shooters;
+// }
+// let army = makeArmy();
+// army[0]();
+// army[1]();
+// army[2]();
+
+// if (true) {
+//   var test = true;
+// }
+// console.log(test);
+
+// for (var i = 0; i < 10; i++) {
+//   // ...
+// }
+
+// alert(i);
+
+// function sayHi() {
+//   if (true) {
+//     var phrase = "Привет!";
+//   }
+
+//   alert(phrase); // срабатывает и выводит "Привет"
+// }
+
+// sayHi();
+// alert(phrase); 
+
+// console.log('Hi!');
+// window.console.log('Hi!');
+
+// window.currentUser = {
+//   name: 'John',
+// };
+// console.log(currentUser.name);
+// console.log(window.currentUser.name);
+
+// if (!window.Promise) {
+//   console.log('your browser is damn old');
+// }
+
+// function sayHi() {
+// console.log('Hi');
+// }
+// console.log(sayHi.name);
+
+// // функция объявлена внутри массива
+// let arr1 = [function() {}];
+
+// alert( arr1[0].name ); 
+// function f1(a) {}
+// function f2(a, b) {}
+// function many(a, b, ...more) {}
+
+// alert(f1.length); // 1
+// alert(f2.length); // 2
+// alert(many.length); // 2
+
+// function sayHi() {
+//   console.log('Hi');
+//   sayHi.counter++;
+// }
+// sayHi.counter = 0;
+// sayHi();
+// sayHi();
+// sayHi();
+
+// console.log( `the function was called ${sayHi.counter} time(s)` );\
+
+// function makeCounter() {
+
+//   function counter() {
+//     return counter.count++;
+//   };
+//   counter.count = 0;
+//   return counter;
+// }
+// let counter = makeCounter();
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// function makeCounter() {
+
+//   function counter() {
+//     return counter.count++;
+//   };
+
+//   counter.count = 0;
+
+//   return counter;
+// }
+
+// let counter = makeCounter();
+
+// // counter.count = 100;
+// console.log( counter() ); // 10
+
+// let sayHi = function (who) {
+//   console.log(`Hello, ${who}`);
+// };
+// sayHi('Costya')
+
+// let sayHi = function func(who) {
+//   if (who) {
+//     console.log(`Hello, ${who}`);
+//   } else {
+//     func('Guest')
+//   }
+// };
+// sayHi()
+
+// let sayHi = function func(who) {
+//   if (who) {
+//     console.log(`Hello, ${who}`);
+//   } else {
+//     sayHi("Guest"); // Ошибка: sayHi не является функцией
+//   }
+// };
+
+// let welcome = sayHi;
+// // sayHi = null;
+
+// sayHi(); // Оши
+// ==========================================================================
+// function makeCounter() {
+//   let counter = 0;
+//   function increaseCounter() {
+//     return increaseCounter.counter++;
+//   }
+//   function setCounter(value) {
+//     return setCounter.counter = value;
+//   }
+//   function decreaseCounter() {
+//     return decreaseCounter.counter--;
+//   }
+  
+//   if (increaseCounter) {
+//     return increaseCounter;
+//   } else if (setCounter) {
+//     return setCounter;
+//   } else {
+//     return decreaseCounter;
+//   }
+  
+// }
+// console.log(makeCounter(increaseCounter()));
+// console.log(count(increaseCounter()));/
+// ==========================================================================
+
+
+// как сделать так чтоб по моему варианту работало??? И я так понял что мой вариант это кокраз вариант замыканий???
+// function makeCounter() {
+//   let count = 0;
+
+//   function counter(){}
+//   counter.increase = () => count++; //function() {return count++}
+//   counter.set = value =>/** что именно обозначает здесь этот знак??? **/ count = value; //  value => count = value; function(value) {return count = value}
+//   counter.decrease = () => count--; //function() {return count--}
+//   return counter;
+// }
+// let count = makeCounter(); // почему вариант с прямым вызовом функции не работает???
+// console.log(count.increase()); // почему здесь increase при первом вызове =0 а потом при втором только начинает увеличивать?
+// console.log(count.increase()); 
+// console.log(count.decrease()); // почему здесь decrease при первом вызове сперва увеличивает а потом при втором только начинает уменьшать?
+// console.log(count.decrease()); 
+// console.log(count.set(10)); 
+// console.log(count.set(20)); 
+// console.log(count.set(30)); 
+// console.log(count.decrease()); 
+// console.log(count.decrease()); 
+// ==========================================================================
+
+function sum(a) {
+  return function(b, ...) {
+    return a + b;
+  }
+}
+let sum1 = sum(1);
+console.log(sum1(7)(5));
+
+
