@@ -3894,7 +3894,7 @@ console.log(arr.filter(inBetween(3, 6)));
 
 //   function counter(){}
 //   counter.increase = () => count++; //function() {return count++}
-//   counter.set = value =>/** что именно обозначает здесь этот знак??? **/ count = value; //  value => count = value; function(value) {return count = value}
+//   counter.set = value => count = value; //  value => count = value; function(value) {return count = value}
 //   counter.decrease = () => count--; //function() {return count--}
 //   return counter;
 // }
@@ -3910,12 +3910,101 @@ console.log(arr.filter(inBetween(3, 6)));
 // console.log(count.decrease()); 
 // ==========================================================================
 
-function sum(a) {
-  return function(b, ...) {
-    return a + b;
-  }
-}
-let sum1 = sum(1);
-console.log(sum1(7)(5));
+// function sum(a) {
+//   return function(b, ...) {
+//     return a + b;
+//   }
+// }
+// let sum1 = sum(1);
+// console.log(sum1(7)(5));
 
+// b = 20;
+// function hey() {
+//   a = 10;
+//   var b = 15;
+// }
+// hey();
+// console.log(a + b);
+// b = 20;
+// console.log(b);
 
+// function sum(a) {
+//   let currentSum = a;
+
+//   function f(b) {
+//     currentSum += b;
+//     return f;
+//   }
+//   f.toString = function() {
+//     return currentSum;
+//   };
+//   return f;
+// }
+// alert(sum(1)(2)(3))
+
+// function sayHi() {
+//   console.log('Hello!');
+// }
+// setTimeout(sayHi, 2000)
+
+// function sayHi(phrase, who) {
+//   console.log(phrase + ', ' + who);
+// }
+// setTimeout(sayHi, 1000, 'Hi', 'Costya');
+
+// setTimeout(`alert('Hey')`, 1000)
+// let timreId = setTimeout(() => console.log('Hey'), 1000)
+// clearTimeout(timreId)
+
+// let timerId = setTimeout(() => console.log('nothing happens'), 1000);
+// console.log(timerId);
+
+// clearTimeout(timerId)
+// console.log(timerId);
+
+// let timerId = setInterval(() => console.log('tick'), 1000);
+// setTimeout(() => {clearInterval(timerId); console.log('stop');}, 5000)
+
+// let timerId = setTimeout(function tick() {
+//   console.log('tick');
+//   timerId = setTimeout(tick, 1000);
+// }, 1000)
+// let i = 1;
+// setInterval(function() {
+//   func(i);
+// }, 100);
+
+// let i = 1;
+// setTimeout(function run() {
+//   func(i);
+//   setTimeout(run, 100);
+// }, 100);
+// let i = 1;
+// setTimeout(function run() {
+//   func(i);
+//   setTimeout(run, 100);
+// }, 100);
+// setTimeout(() => console.log('wrld'));
+// console.log('hey');
+// function printNumbers(from, to) {
+//   let timer = setInterval(() => {
+//     console.log(from);
+//     (from === to) ? clearInterval(timer) : from++;
+//   }, 200)
+// }
+// printNumbers(2, 10);
+
+// function printNumbers(from, to) {
+//   let current = from;
+
+//   setTimeout(function go() {
+//     console.log(current);
+//     if (current < to) {
+//       setTimeout(go, 1000);
+//     }
+//     current++;
+//   }, 1000);
+// }
+
+// // использование:
+// printNumbers(5, 150);
