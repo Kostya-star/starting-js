@@ -17,6 +17,8 @@
 //   }
 // ];
 
+// const { info } = require("autoprefixer")
+
 // // for(let number of todos) {
 // //   console.log(number.id)
 // // }
@@ -3693,15 +3695,15 @@ set.add(10).add(20).add(30).add(20)
 // let sum1 = sum(two(1)) 
 // console.log(sum1(2)(3));
 
-let arr = [1, 2, 3, 4, 5, 6, 7];
-//  ========================================
-function inBetween(a, b) {
-  return function(x) {
-    return x >= a && x <= b; 
-  }
-}
-console.log(arr.filter(inBetween(3, 6)));
-// ============================================
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+// //  ========================================
+// function inBetween(a, b) {
+//   return function(x) {
+//     return x >= a && x <= b; 
+//   }
+// }
+// console.log(arr.filter(inBetween(3, 6)));
+// // ============================================
 
 // function inArray(arr) {
 //   return function(item) {
@@ -4008,3 +4010,180 @@ console.log(arr.filter(inBetween(3, 6)));
 
 // // использование:
 // printNumbers(5, 150);
+
+// function sayHi() {
+//   console.log(this.name);
+// }
+
+// let user = {name: 'Costya'};
+// let admin = {name: 'Admin'};
+
+// sayHi.call(user);
+// sayHi.call(admin);
+
+// function say(phrase) {
+//   console.log(this.name + ': ' + phrase);
+// }
+// let user = {name: 'Costya'};
+// say.call(user, 'Hello!')
+
+// let btn1 = document.querySelector('.btn');
+
+// btn1.onclick = test;
+
+// function test() {
+//   this.style.background = 'orange';
+// }    
+
+// function hello() {
+//   console.log('Hello', this);
+// }
+
+// let person = {
+//   name: 'Costya',
+//   age: 22,
+//   sayHello: hello,
+//   sayHelloWindow: hello.bind(document),
+//   logInfo: function(job, phone) {
+//     console.group(`${this.name} info`);
+//     console.log(`Name is ${this.name}`);
+//     console.log(`Age is ${this.age}`);
+//     console.log(`Job is ${job}`);
+//     console.log(`Phone is ${phone}`);
+//     console.groupEnd()
+//   }
+// }
+
+// let vanya = {
+//   name: 'Vanya',
+//   age: 29,
+// }
+// person.logInfo.bind(vanya, 'FE', '77982502')();
+// person.logInfo.call(vanya, 'FE', '77982502')
+// person.logInfo.apply(vanya, ['FE', '77982502'])
+
+// const array = [1, 2, 3, 4, 5]
+
+// function mult(arr, n) {
+//   return arr.map( i => {
+//     return i * n;
+//   })
+// }
+
+// Array.prototype.multBy = function(n) {
+//   return this.map( i => {
+//     return i * n;
+//   })
+// }
+// console.log(array.multBy(2)); 
+
+// function makeCounter() {
+//   let count = 0;
+
+//   function counter() {};
+//   counter.increase = () => count++;
+//   counter.set = value => count = value;
+//   counter.decrease = () => count--;
+//   return counter;
+// }
+// let count = makeCounter();
+// console.log(count.increase());
+// console.log(count.increase());
+// console.log(count.decrease());
+// console.log(count.decrease());
+// console.log(count.decrease());
+// console.log(count.decrease());
+// console.log(count.decrease());
+// console.log(count.set(10));
+
+// const auto = {
+//   brand: 'Tesla',
+//   drive() {
+//     console.log(this);
+//     return `Lets start our ${this.brand}`
+//   }
+// }
+// // console.log(auto.drive());
+
+// const motorBike = {
+//   brand: 'Suzuki',
+// }
+
+// const autoDrive = auto.drive.bind(auto); 
+// const motorDrive = auto.drive.bind(motorBike)
+
+// const bill = {
+//   tip: 0.1,
+//   calculate(total) {
+//     return total + total * this.tip
+//   },
+//   detail(dish1, dish2, sum) {
+//     return `your meal (${dish1}, ${dish2}) costs ${this.calculate(sum)})`
+//   }
+// }
+
+// const pay = bill.detail('pizza', 'salad', 1000);
+
+// const payCount = bill.detail.call(bill, 'pizza', 'salad', 1000);
+
+// const payCount2 = bill.detail.apply(bill, ['pizza', 'salad', 1000]);
+
+// console.log(pay);
+// console.log(payCount);
+// console.log(payCount2);
+
+const person = {
+  name: 'Costya',
+}
+
+function info(phone, email) {
+  console.log(`Name is ${this.name}, tel: ${phone}, email: ${email}`);
+}
+
+// info.bind(person)('77967825', 'costya@mail.ru');
+// info.bind(person, '77967825')('costya@mail.ru')
+
+// 1 method
+// function bind(fn, context, ...rest ) {
+//   return fn.bind(context, ...rest)
+// }
+
+// 2 method(uncompleted)
+// function bind(fn, context, ...rest) {
+//   return function() {
+//     const uniqId = Date.now().toString() 
+     
+//   }
+// }
+
+// 3 method
+// function bind(fn, context) {
+//   const rest = Array.prototype.slice.call(arguments, 2)
+//   return function() {
+//     const args = Array.prototype.slice.call(arguments)
+//     return fn.apply(context, rest.concat(args))
+//   }
+// }
+
+// function bind(fn, context, ...rest) {
+//   return function(...args) {
+//     return fn.apply(context, rest.concat(args))
+//   }
+// }
+
+// bind(info, person)('12345', 'costa@mail.ru')
+// bind(info, person, '12345')('costa@mail.ru')
+// bind(info, person, '12345', 'costa@mail.ru')()
+
+let user = {
+  firstName: 'Costya',
+  sayHi() {
+    console.log(`Hello ${this.firstName}`);
+  }
+};
+
+// setTimeout(user.sayHi, 1000);
+
+setTimeout(function() {
+  user.sayHi();
+}, 1000);
