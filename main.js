@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 // const todos = [
 //   {
 //     id: 1,
@@ -4132,13 +4132,13 @@ set.add(10).add(20).add(30).add(20)
 // console.log(payCount);
 // console.log(payCount2);
 
-const person = {
-  name: 'Costya',
-}
+// const person = {
+//   name: 'Costya',
+// }
 
-function info(phone, email) {
-  console.log(`Name is ${this.name}, tel: ${phone}, email: ${email}`);
-}
+// function info(phone, email) {
+//   console.log(`Name is ${this.name}, tel: ${phone}, email: ${email}`);
+// }
 
 // info.bind(person)('77967825', 'costya@mail.ru');
 // info.bind(person, '77967825')('costya@mail.ru')
@@ -4175,15 +4175,146 @@ function info(phone, email) {
 // bind(info, person, '12345')('costa@mail.ru')
 // bind(info, person, '12345', 'costa@mail.ru')()
 
-let user = {
-  firstName: 'Costya',
-  sayHi() {
-    console.log(`Hello ${this.firstName}`);
+// let user = {
+//   firstName: 'Costya',
+//   sayHi() {
+//     console.log(`Hello ${this.firstName}`);
+//   }
+// };
+
+// // setTimeout(user.sayHi, 1000);
+
+// setTimeout(function() {
+//   user.sayHi();
+// }, 1000);
+// let user = {
+//   firstName: 'Costya',
+//   sayHi() {
+//     console.log(`Hello ${this.firstName}`);
+//   }
+// };
+// // setTimeout(function() {
+// //   user.sayHi();
+// // }, 1000)
+// setTimeout(() => user.sayHi(), 1000)
+
+// let user = {
+//   firstName: 'Costya',
+// };
+// function func() {
+//   console.log(this.firstName);
+// }
+
+// funcLink = func.bind(user);
+// funcLink()
+
+// let user = {
+//   firstName: 'Costya',
+// };
+// function func(phrase) {
+//   console.log(phrase + ', ' + this.firstName);
+// }
+
+// funcLink = func.bind(user);
+// funcLink('Hello')
+// let user = {
+//   firstName: "Вася",
+//   sayHi() {
+//     console.log(`Привет, ${this.firstName}!`);
+//   }
+// };
+
+// let sayHiLink = user.sayHi.bind(user);
+// sayHiLink()
+// setInterval(sayHiLink, 1000)
+
+// let person  = {
+//   name: 'Costya',
+//   age: 22,
+//   info(phrase1 = 'your name is', phrase2 = 'your age is') {
+//     console.log(`${phrase1} ${this.name}, ${phrase2} ${this.age}`);
+//   }
+// };
+// let say = person.info.bind(person);
+// say()
+
+// let person  = {
+//   name: 'Costya',
+//   age: 22,
+//   info(phrase1 = 'your name is', phrase2 = 'your age is') {
+//     console.log(`${phrase1} ${this.name}, ${phrase2} ${this.age}`);
+//   }
+// };
+
+// for (let key in person) {
+//   if (typeof person[key] === 'function') {
+//     person[key].bind(person)
+//     let link = person[key]()
+//   }
+// }
+
+// function mul(a, b) {
+//   return a * b;
+// }
+
+// let bound = mul.bind(null, 2);
+// console.log(bound(4));
+
+// function func() {
+//   console.log(this.name);
+// }
+//  let linked = func.bind( {name: 'Costya'} )
+//  linked()
+
+// function sayHi() {
+//   alert( this.name );
+// }
+// sayHi.test = 5;
+
+// let bound = sayHi.bind({
+//   name: "Вася"
+// });
+
+// bound()
+// 'use strict';
+
+// function askPassword(ok, fail) {
+//   let password = prompt('insert your password plz');
+//   (password === 'rockstar') ? ok() : fail();
+// }
+// let user = {
+//   name: 'Costya',
+//   loginOk() {
+//     console.log(`${this.name} logged in successfully`);
+//   },
+//   loginFail() {
+//     console.log(`${this.name} failed to log in`);
+//   },
+// };
+//  askPassword( user.loginOk.bind(user), user.loginFail.bind(user) );
+
+// function askPassword(ok, fail) {
+//   let password = prompt('insert your password plz')
+//   password === 'rockstar' ? ok() : fail()
+// }
+// let user = {
+//   name: 'Costya',
+//   login(result) {
+//     console.log( this.name + (result ? ' logged in' : ' failed to log in') );
+//   }
+// };
+
+// askPassword(user.login.bind(user, true), user.login.bind(user, false));
+// askPassword(() => user.login(true), () => user.login(false))
+// askPassword(function() {user.login(true)}, function() {user.login(false)})
+
+let group = {
+  title: 'Our group',
+  students: ['Costya', 'Vanya', 'Igor'],
+  showList() {
+    this.students.forEach(
+      student => console.log(this.title + ': ' + student)
+    );
   }
 };
-
-// setTimeout(user.sayHi, 1000);
-
-setTimeout(function() {
-  user.sayHi();
-}, 1000);
+group.showList();
