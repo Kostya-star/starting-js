@@ -4308,13 +4308,168 @@ set.add(10).add(20).add(30).add(20)
 // askPassword(() => user.login(true), () => user.login(false))
 // askPassword(function() {user.login(true)}, function() {user.login(false)})
 
-let group = {
-  title: 'Our group',
-  students: ['Costya', 'Vanya', 'Igor'],
-  showList() {
-    this.students.forEach(
-      student => console.log(this.title + ': ' + student)
-    );
-  }
-};
-group.showList();
+// let group = {
+//   title: 'Our group',
+//   students: ['Costya', 'Vanya', 'Igor'],
+//   showList() {
+//     this.students.forEach(
+//       student => console.log(this.title + ': ' + student)
+//     );
+//   }
+// };
+// group.showList();
+// let user = {
+//   name: 'Costya',
+//   surname: 'Danilov',
+//   get fullName() {
+//     return `${this.name} ${this.surname}`
+//   }
+// };
+// console.log(user.fullName);
+
+// let user = {
+//   name: 'Costya',
+//   surname: 'Danilov',
+//   patronamic: 'Petrovich',
+
+//   get fullName() {
+//     return `${this.name} ${this.surname} ${this.patronamic}`
+//   },
+
+//   set fullName(value) {
+//     [this.name, this.surname, this.patronamic] = value.split(' ');
+//   }
+// };
+
+// user.fullName = 'Alice Cooper Bolt';
+// console.log(user.fullName);
+
+// let user = {
+//   name: 'Costya',
+//   surname: 'Danilov',
+// };
+
+//   Object.defineProperty(user, 'fullName', {
+//     get() {
+//       return `${this.name} ${this.surname}`;
+//     },
+
+//     set(value) {
+//       [this.name, this.surname] = value.split(' ');
+//     }
+//   });
+//   console.log(user.fullName);
+//   for (let key in user) console.log(key);
+
+// let user = {
+//   get name() {
+//     return this._name
+//   },
+
+//   set name(value) {
+//     if (value.length < 4) {
+//       console.log('The name is too short'); return
+//     }
+//     this._name = value;
+//   }
+// };
+
+// user.name = 'Costya';
+// console.log(user.name);
+
+
+// try {
+//   console.log('start');
+//   cfghjk2
+//   console.log('end');
+
+// } catch(err) {
+//   console.log('ops an error');
+// }
+
+// setTimeout(function() {
+//   try {
+//     noVariable;
+//   } catch {
+//     console.log( 'the error is caught!' );
+//   }
+// }, 1000)
+
+// try{
+//   dfgh
+// } catch(err) {
+//   console.log(err.name);
+//   console.log(err.message);
+//   console.log(err.stack);
+//   console.log(err);
+// }
+
+// let json = '{"name":"John", "age": 30}';
+// let user = JSON.parse(json)
+// console.log(user);
+
+// let json = '{ "age": 30 }';
+
+// try {
+//   let user = JSON.parse(json)
+//   console.log(user.name);
+// } catch(e) {
+//   console.log('sorry dude ur fucked up so bad!');
+//   console.log(e);
+// }
+
+// let json = '{"age": 30}';
+
+// try {
+//   let user = JSON.parse(json);
+//   if(!user.name) throw new SyntaxError('the data is not complete');
+//   console.log(user.name);
+// } catch(e) {
+//   console.log('JSON ERROR: ' + e.message);
+// }
+
+
+// try {
+  //   user = JSON.parse(json);
+  //   console.log(user);
+  // } catch(e) {
+    //   console.log('Json error: ' + e);
+    // }
+
+    // let json = '{"age": 30}';
+    // try {
+    //   let user = JSON.parse(json);
+    //   if (!user.name) throw new SyntaxError('data isnt complete');
+    //   blabla();
+    //   console.log(user.name);
+    // } catch(e) {
+    //   if (e.name == 'SyntaxError') {
+    //     console.log('JSON Error: ' + e.message);
+    //   } else throw e;
+    // } 
+
+// function readData() {
+//   let json = '{"age: 30"}';
+
+//   try{
+//     bla()
+//   } catch(e) {
+//     if (e.name != 'SyntaxError') throw e;
+//   }
+// }
+
+// try {
+//   readData();
+// } catch(e) {
+//   console.log('the outer catch is caught: ' + e);
+// }
+
+
+try {
+  console.log('try');
+  if (confirm('generate an error')) fuckedupcode();
+} catch(err) {
+  console.log('catch');
+} finally {
+  console.log('finally');
+}
