@@ -4465,11 +4465,146 @@ set.add(10).add(20).add(30).add(20)
 // }
 
 
-try {
-  console.log('try');
-  if (confirm('generate an error')) fuckedupcode();
-} catch(err) {
-  console.log('catch');
-} finally {
-  console.log('finally');
+// try {
+//   console.log('try');
+//   if (confirm('generate an error')) fuckedupcode();
+// } catch(err) {
+//   console.log('catch');
+// } finally {
+//   console.log('finally');
+// }
+
+// function loadScript(src) {
+//   let script = document.createElement('script');
+//   script.src = src;
+//   document.head.append(script)
+// }
+// loadScript('/my/script.js');
+
+// function myFunc(callback) {
+//   const arr = [1, 2, 3, 4, 5];
+//   let element = document.querySelector('.out-1');
+//   callback(element, arr);
+// }
+
+// function out(elem, array) {
+//   elem.innerHTML = array.join('+');
+// }
+
+// myFunc(out)
+
+// function copyArrAndDoSmth(arr, instructions) {
+//   let output = [];
+
+//   for (let item of arr) output.push(instructions(item));
+
+//   return output;
+// }
+
+// function numSquared(num) {
+//   return num * num;
+// }
+
+// function divideByTwo(num) {
+//   return num / 2;
+// }
+
+// console.log(copyArrAndDoSmth([1,2,3], numSquared));
+// console.log(copyArrAndDoSmth([10,20,30], divideByTwo));
+
+// function first(func) {
+//   console.log(1);
+//   func()
+// }
+// first(second)
+
+
+// function second() {
+//   setTimeout(function() {console.log(2)},1000)
+// }
+
+// function first(func) {
+//   console.log(1);
+//   func()
+// }
+
+// function second(a, b) {
+//   console.log(a * b);
+// }
+
+// // first(second(2, 2))
+// first(function() {
+//   second(2, 2)
+// })
+
+// const arr = [2,4,5,8,9];
+// let out1 = document.querySelector('.out-1')
+
+// function func(arr1, myFunc, block) {
+//   arr1[3] = arr1[3] * 2;
+//   // out1.innerHTML = arr
+//   myFunc(arr1, block)
+// }
+
+// function showArr(arr1, block) {
+//   let out = '';
+//   for (let item of arr1) out = out + item + '_';
+//   block.innerHTML = out
+// }
+
+// func(arr, showArr, out1)
+
+
+// const arr = [2,4,5,8,9];
+// let out1 = document.querySelector('.out-1')
+
+
+// function square(item) {
+//   return item ** 2;
+// } 
+
+// const arr2 = arr.map(square);
+// console.log(arr2);
+
+// const makePizza = function(title, cb) {
+//   console.log(`The order to make pizza ${title} is received. It will be made soon!`);
+//   setTimeout(cb, 3000)
+// }
+
+// const readBook = function() {
+//   console.log(`Reading a book!...`);
+// }
+
+// const eatPizza = function() {
+//   console.log(`Hooraaay, the pizza has been made! Time to eat!`);
+// }
+
+// makePizza('Pepperoni', eatPizza);
+// readBook();
+
+// let x = [1,2,3,4,5,6,7,8,9,10];
+
+// let y = x.filter(n => n % 2 === 0)
+// console.log(y);
+
+// function greeting(name) {
+//   console.log('hey ' + name);
+// }
+
+// function processUserInput(callback) {
+//   let name = prompt('Plz enter your name');
+//   callback(name);
+// }
+// processUserInput(greeting)
+
+function greeting(name) {
+  console.log(`Hello ${name}`);
 }
+
+function processUserInput(callback) {
+  let name = prompt('plz insert your name');
+
+  return callback(name)
+}
+
+processUserInput(greeting)
