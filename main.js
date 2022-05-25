@@ -4597,14 +4597,69 @@ set.add(10).add(20).add(30).add(20)
 // }
 // processUserInput(greeting)
 
-function greeting(name) {
-  console.log(`Hello ${name}`);
-}
+// function greeting(name) {
+//   console.log(`Hello ${name}`);
+// }
 
-function processUserInput(callback) {
-  let name = prompt('plz insert your name');
+// function processUserInput(callback) {
+//   let name = prompt('plz insert your name');
 
-  return callback(name)
-}
+//   return callback(name)
+// }
 
-processUserInput(greeting)
+// processUserInput(greeting)
+
+// let promise = new Promise(function(resolve, reject) {
+//   setTimeout(() => resolve('done'), 1000)
+// });
+
+// let promise = new Promise(function(resolve, reject) {
+//   setTimeout(() => reject(new Error('whoops!')), 1000)
+// });
+
+// let promise = new Promise(function(resolve, reject) {
+//   resolve('done');
+//   reject(new Error('...'));
+//   setTimeout(() => resolve('...'))
+// })
+
+// let promise = new Promise(function(resolve, reject) {
+//   setTimeout(() => resolve ('done!'), 1000);
+// });
+
+// promise.then(
+//   result => console.log(result),
+//   error => console.log(error),
+// )
+
+// let promise = new Promise(function(resolve, reject) {
+//   setTimeout(() => reject(new Error('Whoops')), 1000)
+// });
+
+// promise.then(
+//   result => console.log(result),
+//   error => console.log(error),
+// );
+
+// let promise = new Promise(resolve => {
+//   setTimeout(() => resolve('done!'), 1000);
+// });
+// promise.then(alert)
+
+// let promise = new Promise((resolve, reject) => {
+//   setTimeout(() => reject(new Error('error')), 1000);
+// });
+
+// promise.catch(alert)
+
+// let promise = new Promise((resolve, result) => {
+//   setTimeout(() => resolve('result'), 1000)
+// })
+// .finally(() => console.log('Promise is completed'))
+// .then(result => console.log(result));
+
+let promise = new Promise((resolve, reject) => {
+  throw new Error('error');
+})
+  .finally(() => console.log('completed'))
+  .catch(err => console.log(err));
