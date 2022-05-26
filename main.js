@@ -4658,8 +4658,62 @@ set.add(10).add(20).add(30).add(20)
 // .finally(() => console.log('Promise is completed'))
 // .then(result => console.log(result));
 
-let promise = new Promise((resolve, reject) => {
-  throw new Error('error');
+// let promise = new Promise((resolve, reject) => {
+//   throw new Error('error');
+// })
+//   .finally(() => console.log('completed'))
+//   .catch(err => console.log(err));
+
+// console.log('Request data');
+
+// setTimeout(() => {
+//   console.log('Preparing data');
+
+//   const backendData = {
+//     server: 'aws',
+//     port: 2000,
+//     status: 'working',
+//   }
+
+//   setTimeout(() => {
+//     backendData.modified = true
+//     console.log('Data received', backendData);
+//   }, 2000)
+// }, 2000)
+
+// const p = new Promise(function(resolve, reject) {
+//   setTimeout(() => {
+//     console.log('Preparing Data...');
+
+//     const backendData = {
+//       server: 'aws',
+//       port: 2000,
+//       status: 'working',
+//     }
+//     resolve(backendData)
+//   }, 2000)
+// })
+
+// p.then(data => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       data.modified = true
+//       resolve(data)
+//       // console.log('Data received', backendData);
+//     }, 2000)
+//   })
+  
+// }).then(clientData => {
+//   console.log('Data received', clientData);
+// })
+
+let p = new Promise((resolve, reject) => {
+  let a = 1 + 1;
+  (a === 2) ? resolve('Success') : reject('Failed')
 })
-  .finally(() => console.log('completed'))
-  .catch(err => console.log(err));
+
+p.then((message) => {
+  console.log('this is in the then ' + message);
+}).catch((message) => {
+  console.log('this is in the catch ' + message);
+})
