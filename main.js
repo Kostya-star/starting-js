@@ -4707,13 +4707,75 @@ set.add(10).add(20).add(30).add(20)
 //   console.log('Data received', clientData);
 // })
 
-let p = new Promise((resolve, reject) => {
-  let a = 1 + 1;
-  (a === 2) ? resolve('Success') : reject('Failed')
-})
+// let p = new Promise((resolve, reject) => {
+//   let a = 1 + 1;
+//   (a === 2) ? resolve('Success') : reject('Failed')
+// })
 
-p.then((message) => {
-  console.log('this is in the then ' + message);
-}).catch((message) => {
-  console.log('this is in the catch ' + message);
-})
+// p.then((message) => {
+//   console.log('this is in the then ' + message);
+// }).catch((message) => {
+//   console.log('this is in the catch ' + message);
+// })
+
+// let allGood = false;
+
+// let fetchSomeData = new Promise((resolve, reject) => {
+//   if (!allGood) reject('error fetching data!')
+//   resolve({
+//     id: 1,
+//     message: 'nice work!',
+//   })
+// })
+
+// fetchSomeData.then(fetchedData => {
+//   console.log('then: ', fetchedData);
+// }).catch(err => {
+//   console.error('catch: ', err);
+// })
+
+// let p = new Promise((resolve, reject) => {
+//   let rand = Math.floor(Math.random() * 2);
+//   if (rand === 0) resolve()
+//   reject()
+// });
+// p
+//   .then(() => console.log('Success'))
+//   .catch(() => console.error('smth went wrong'));
+
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve()
+//   }, 1000)
+// })
+
+// const promise2 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     reject()
+//   }, 1000)
+// })
+
+// const fulfilment = () => {
+//   console.log('set up the table to eat tacos');
+// }
+// const rejection = () => {
+//   console.log('start cooking pasta');
+// }
+
+// promise
+//   .then(fulfilment)
+//   .catch(rejection)
+
+// let p = new Promise((resolve, reject) => {
+//   setTimeout(() => resolve(1), 1000)
+//   setTimeout(() => reject(2), 1000);
+// });
+
+// p.then(console.log).catch(console.log)
+
+function delay(ms) {
+  return new Promise(resolve => {
+    setTimeout(resolve, ms);
+  })
+}
+delay(1000).then(() => console.log('done in 3 secs'))
