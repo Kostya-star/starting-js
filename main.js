@@ -4773,9 +4773,134 @@ set.add(10).add(20).add(30).add(20)
 
 // p.then(console.log).catch(console.log)
 
-function delay(ms) {
-  return new Promise(resolve => {
-    setTimeout(resolve, ms);
-  })
-}
-delay(1000).then(() => console.log('done in 3 secs'))
+// function delay(ms) {
+//   return new Promise(resolve => {
+//     setTimeout(resolve, ms);
+//   })
+// }
+// delay(1000).then(() => console.log('done in 3 secs'))
+
+// new Promise(function(resolve, reject) {
+
+//   setTimeout(() => resolve(1), 1000); // (*)
+
+// }).then(function(result) { // (**)
+
+//   console.log(result); // 1
+//   return result * 2;
+
+// }).then(function(result) { // (***)
+
+//   console.log(result); // 2
+//   return result * 2;
+
+// }).then(function(result) {
+
+//   console.log(result); // 4
+//   return result * 2;
+
+// });
+
+// new Promise(function(resolve, reject) {
+//   setTimeout(() => resolve(1), 1000);
+// }).then(function(result) {
+//   console.log(result);
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => resolve(result * 2), 1000);
+//   });
+// }).then(function(result) {
+//   console.log(result);
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => resolve(result * 2), 1000);
+//   });
+// }).then(function(result) {
+//   console.log(result);
+// });
+
+// fetch('https://no-such-server.blabla')
+//   .then(response => response.json())
+//   .catch(error => console.log(error))
+
+// new Promise((resolve, reject) => {
+//   throw new Error('Error');
+// }).catch(console.log)
+
+// new Promise((resolve, reject) => {
+//   throw new Error('error');
+// }).catch(function(error) {
+//   console.log('the error has been processed, proceed work');
+// }).then(() => console.log('the ruling will come to the next then'))
+
+// new Promise((resolve, reject) => {
+//   reject(new Error('error'));
+// }).catch(console.log)
+
+// new Promise((resolve, reject) => {
+//   resolve('ok');
+// }).then((result) => {
+//   throw new Error('error');
+// }).catch(console.log)
+
+// new Promise((resolve, reject) => {
+//   resolve('ok');
+// }).then((result) => {
+//   blabla();
+// }).catch(console.log);
+
+// new Promise((resolve, reject) => {
+//   throw new Error('error');
+// }).catch(error => {
+//   console.log('the err has been processed, carry on work');
+// }).then(() => console.log('the ruling comes to the next then');)
+
+// new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     throw new Error('whoops!');
+//   }, 1000);
+// }).catch(console.log)
+
+// new Promise(function (resolve, reject) {
+//   setTimeout(() => {
+//   // throw new Error("Whoops!");
+//   reject(new Error("Whoops!"));
+//   }, 1000);
+//   }).catch(alert);
+
+// Promise.all([
+//   new Promise(resolve => setTimeout(() => resolve(1), 3000)),
+//   new Promise(resolve => setTimeout(() => resolve(2), 2000)),
+//   new Promise(resolve => setTimeout(() => resolve(3), 1000)),
+// ]).then(console.log)
+
+ function request( delay, isRejected ) {
+   return new Promise((resolve, reject) => {
+     setTimeout(() => {
+       if (isRejected) reject(`${delay} is rejected`) 
+        else resolve(`${delay} was resolved`)
+     }, delay * 1000)
+   })
+ }
+
+const data = [
+  {
+    value: 1,
+    isRejected: false,
+  },
+  {
+    value: 2,
+    isRejected: false,
+  },
+  {
+    value: 3,
+    isRejected: false,
+  },
+]
+
+const promises = data.map( ({value, isRejected}) => {
+  return request(value, isRejected)
+})
+console.log(promises);
+
+Promise.all(promises)
+  .then(console.log)
+  .catch(console.error)
