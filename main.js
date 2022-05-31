@@ -4872,35 +4872,222 @@ set.add(10).add(20).add(30).add(20)
 //   new Promise(resolve => setTimeout(() => resolve(3), 1000)),
 // ]).then(console.log)
 
- function request( delay, isRejected ) {
-   return new Promise((resolve, reject) => {
-     setTimeout(() => {
-       if (isRejected) reject(`${delay} is rejected`) 
-        else resolve(`${delay} was resolved`)
-     }, delay * 1000)
-   })
- }
+//  function request( delay, isRejected ) {
+//    return new Promise((resolve, reject) => {
+//      setTimeout(() => {
+//        if (isRejected) reject(`${delay} is rejected`) 
+//         else resolve(`${delay} was resolved`)
+//      }, delay * 1000)
+//    })
+//  }
 
-const data = [
-  {
-    value: 1,
-    isRejected: false,
-  },
-  {
-    value: 2,
-    isRejected: false,
-  },
-  {
-    value: 3,
-    isRejected: false,
-  },
-]
+// const data = [
+//   {
+//     value: 1,
+//     isRejected: false,
+//   },
+//   {
+//     value: 2,
+//     isRejected: false,
+//   },
+//   {
+//     value: 3,
+//     isRejected: false,
+//   },
+// ]
 
-const promises = data.map( ({value, isRejected}) => {
-  return request(value, isRejected)
-})
-console.log(promises);
+// const promises = data.map( ({value, isRejected}) => {
+//   return request(value, isRejected)
+// })
+// console.log(promises);
 
-Promise.all(promises)
-  .then(console.log)
-  .catch(console.error)
+// Promise.all(promises)
+//   .then(console.log)
+//   .catch(console.error)
+
+// Promise.all([])
+
+// let momIsHappy = true;
+
+// let showOff = (phone) => {
+//   let message = 'Hey you sucker, i got a new ' + phone.color + '' + phone.brand;
+//   return Promise.resolve(message);
+// };
+
+// let getNewPhone = new Promise((resolve, reject) => {
+//   if (momIsHappy) {
+//     let phone = {
+//       brand: 'Samsung',
+//       color: 'black',
+//     }
+//     resolve(phone)
+//   } else {
+//     let reason = new Error('mom is not happy')
+//     reject(reason)
+//   }
+// }
+// )
+
+// function askMom() {
+//   console.log('before asking mom');
+//   getNewPhone
+//   .then(showOff)
+//   .then((fulfilled) => console.log(fulfilled))
+//   .catch((error) => console.error(error.message))
+//   console.log('after asking mom');
+// }
+// askMom()
+
+// async function f() {
+//   return 1;
+// }
+// f().then(console.log)
+
+// async function f() {
+//   return Promise.resolve(1);
+// }
+// f().then(console.log)
+
+// async function func() {
+//   let promise = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve('done'), 1000)
+//   });
+  
+//   // console.log('hey');
+//   let result = await promise;
+//   console.log(result);
+// }
+// func()
+
+// async function f() {
+
+//   try {
+//     let response = await fetch('http://no-such-url');
+//   } catch(err) {
+//     console.log(err); 
+//   }
+// }
+
+// f();
+
+// async function f() {
+//   let response = await fetch('http://no-such-url')
+// }
+// f().catch(e => console.log(e.message))
+
+// async function loadJson(url) {
+//   let response = await fetch(url);
+
+//   if (response.status == 200) {
+//     let json = await response.json();
+//     return json;
+//   }
+//   throw new Error(response.status);
+// }
+
+// loadJson('no-such-json')
+//   .catch(console.log)
+
+// const delay = ms => {
+//   return new Promise(r => setTimeout(() => r(), ms))
+// }
+// delay(2000).then(() => console.log('2 sec'))
+
+// const url = 'https://jsonplaceholder.typicode.com/todos/1'
+
+// function fetchTodos() {
+//   console.log('Fetch todo started...');
+//   return delay(2000)
+//     .then(() => fetch(url))
+//     .then(response => response.json())
+// }
+
+// fetchTodos()
+//   .then(data => {
+//     console.log('Data: ', data);
+//   })
+//   .catch(e => console.error(e))
+
+// async function fetchAsyncTodos() {
+//   console.log('fetching todo started...');
+//   try {
+//     await delay(2000)
+//     let response = await fetch(url)
+//     let data = await response.json()
+//     console.log('Data: ', data);
+//   } catch (e) {
+//     console.error(e);
+//   }
+// }
+
+// fetchAsyncTodos()
+
+function sleep(time) {
+  return new Promise((resolve, reject) => {
+
+    if (time < 500) reject('way too little sleep')
+
+    setTimeout(() => resolve(`total sleep is ${time}`), time);
+  })
+}
+const sleepSession = async() => {
+  try {
+      const sleep1 = await sleep(1500);
+      console.log(sleep1);
+      const sleep2 = await sleep(1000);
+      console.log(sleep2);
+      const sleep3 = await sleep(500);
+      console.log(sleep3);
+      const sleep4 = await sleep(200);
+      console.log(sleep4);
+    } catch(e) {
+      console.error('error>>>>', e);
+    }
+  }
+  sleepSession()
+  // const sleepSession = () => {
+  //   sleep(1500).then(console.log)
+  //   sleep(500).then(console.log)
+  //   sleep(600).then(console.log)
+  // }
+  // sleepSession()
+// sleep(1500).then(res => {
+//   console.log(res);
+//   return sleep(1000)
+// }).then(res => {
+//   console.log(res);
+//   return sleep(500);
+// }).then(res => {
+//   console.log(res);
+//   return sleep(250);
+// }).then(res => {
+//   console.log(res);
+// }).catch(error => console.error(error))
+
+// setInterval(() => console.log(Date.now()), 500)
+// const video = document.querySelector('video');
+
+// const getUserVideo = async () => {
+  //   const response = await navigator.mediaDevices.getUserMedia({ video: true });
+  //   video.srcObject = response;
+  // }
+  // getUserVideo()
+  
+  // const video = document.querySelector('video');
+  
+  // const myVideo = navigator.mediaDevices.getUserMedia({video: true}).then(mediaStream => {
+    //   video.srcObject = mediaStream;
+    // });
+    // console.log(myVideo);
+
+// const video = document.querySelector('video');
+// const getUserVideo = async() => {
+
+//   try {
+//     const response = await navigator.mediaDevices.getUserMedia({video: true});
+//     video.srcObject = response;
+//   } catch(error) {
+//     console.error('Error>>> ', error);
+//   }
+// }
+// getUserVideo()
