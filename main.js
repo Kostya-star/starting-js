@@ -5117,5 +5117,194 @@
 //   location.href = 'https://wikipedia.org';
 // }
 
-document.body.style.background = 'red';
-setTimeout(() => document.body.style.background = '', 3000);
+// document.body.style.background = 'red';
+// setTimeout(() => document.body.style.background = '', 3000);
+
+// for(let i = 0; i < document.body.childNodes.length; i++) {
+//   console.log(document.body.childNodes[i]);
+// }
+
+// for (let node of document.body.childNodes) {
+//   console.log(node);
+// }
+// let a = Array.from(document.body.childNodes);
+// console.log(a.filter);
+// console.log(Array.from(document.body.childNodes).filter);
+
+// console.log( document.body.childNodes[1] );
+// console.log(document.body.children[1].lastElementChild);
+// let table = document.body.firstElementChild;
+// for(let i = 0; i < table.rows.length; i++) {
+//   table.rows[i].cells[i].style.backgroundColor = 'red';
+// }
+
+// for(let i = 0; i < document.body.firstElementChild.rows.length; i++) {
+//   document.body.firstElementChild.rows[i].cells[i].style.backgroundColor = 'red';
+// }
+
+// let table = document.body.firstElementChild;
+// for(let i = 0; i < table.rows.length; i++) {
+//   table.rows[i].cells[i].style.backgroundColor = 'red';
+// }
+
+// let elem = document.getElementById('elem');
+// elem.style.background = 'red';
+
+// let elements = document.querySelectorAll('ul > li:last-child');
+// for(let el of elements) {
+//   console.log(el.innerHTML);
+// }
+
+// for (let el of document.body.children) {
+//   if (el.matches('a[href$="zip"]')) console.log('the reference is: ' + el);
+// }
+
+// let chapter = document.querySelector('.chapter');
+// console.log(chapter.closest('.book'));
+// console.log(chapter.closest('.contents'));
+
+// let e = document.getElementsByClassName('.article');
+// console.log(e.length);
+
+// let d = document.querySelectorAll('div')
+// console.log(d.length);
+// 1)let table = document.getElementById('age-table')
+// console.log(table);
+
+// 2)console.log(table.querySelectorAll('label'));
+
+// 3)console.log(table.querySelector('td'));
+
+// 4)document.querySelector('form[name="search"]')
+
+// 5)console.log(form.querySelector('input'));
+
+// 6)let form = document.querySelector('form[name="search"]')
+// let inputs = form.querySelectorAll('input');
+// inputs[inputs.length-1]
+
+// alert(document.body);
+
+// console.log(document.body);
+
+// let e = document.body;
+// console.log(e.nodeType);
+// console.log(e.firstChild.nodeType);
+// console.log(document.nodeType);
+
+// console.log(document.body.tagName);
+
+// console.log(document.body.firstChild.tagName);
+// console.log(document.body.firstChild.nodeName);
+// document.body.innerHTML = 'new body'
+// console.log(document.body.innerHTML);
+// console.log(document.body.innerHTML);
+
+// document.body.innerHTML += ''
+// console.log(a.outerHTML);
+// let text = document.body.firstChild;
+// console.log(text.data);
+// let com = text.nextSibling;
+// console.log(com.data);
+// console.log(typeof com);
+
+// console.log(news.textContent);
+
+// let name = prompt('type your name here', '<b></b>')
+// elem1.innerHTML = name;
+// elem2.textContent = name;
+
+// setInterval(() => elem.hidden = !elem.hidden, 1000)
+// let e = document.querySelector('.e')
+// setInterval(() => e.hidden = !e.hidden, 100)
+// setInterval(function() {
+//   e.hidden = !e.hidden
+// }, 1000)
+
+// for(let li of document.querySelectorAll('li')) {
+//   console.log(li.firstChild.data);
+
+//   console.log(document.querySelectorAll('li').length); 
+// }
+
+// let body = document.body;
+// body.innerHTML = '<!--' + body.tagName + "-->";
+// console.log(body.lastChild.data);
+// alert(document.nodeType);
+
+// document.body.myData = {
+//   name: 'Costya',
+//   title: 'Imperator',
+// };
+// console.log(document.body.myData.name);
+
+// document.body.sayTagName = function() {
+//   console.log(this.tagName);
+// }
+// document.body.sayTagName()
+
+// console.log(document.body.getAttribute('smth'));
+
+// console.log(elem.getAttribute('about'));
+// elem.setAttribute('test', 12345);
+// // console.log(elem.outerHTML);
+// for (let attr of elem.attributes) {
+//   console.log(`${attr.name} = ${attr.value}`);
+// }
+
+// let input = document.querySelector('input')
+// input.setAttribute('id', 'idValue')
+// console.log(input.id); 
+// input.idName = 'newIdName'
+// console.log(input.idName);
+
+// let user = {
+//   name: 'Costya',
+//   age: 22,
+// };
+
+// for(let div of document.querySelectorAll(['show-info'])) {
+//   // let field = div.getAttribute('show-info')
+
+// }
+
+// console.log(document.body.dataset.about);
+// let div = document.querySelector('[widget-name]')
+// console.log(div);
+// // console.log(div.dataset.widgetName);
+// console.log(div.getAttribute('widget-name'));
+
+// let user = {
+//   name: "Pete",
+//   age: 25
+// };
+
+// for(let div of document.querySelectorAll('[show-info]')) {
+//   // вставить соответствующую информацию в поле
+//   let field = div.getAttribute('show-info');
+//   div.innerHTML = user[field]; // сначала Pete в name, потом 25 в age
+// }
+
+
+// let links = document.querySelectorAll('a');
+
+// for(let link of links) {
+//   let href = link.getAttribute('href')
+//   if(!href) continue;
+//   if(!href.includes('://')) continue;
+//   if(href.startsWith('http://internal.com')) continue;
+//   link.style.color = 'orange';
+// }
+
+// let links = document.querySelectorAll('a');
+
+// for (let link of links) {
+//   let href = link.getAttribute('href');
+//   if (!href) continue; // нет атрибута
+
+//   if (!href.includes('://')) continue; // нет протокола
+
+//   if (href.startsWith('http://internal.com')) continue; // внутренняя
+
+//   link.style.color = 'orange';
+// }
