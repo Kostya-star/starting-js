@@ -5308,3 +5308,193 @@
 
 //   link.style.color = 'orange';
 // }
+// let div = document.createElement('div');
+// div.className = 'alert';
+// div.innerHTML = '<strong>Hey everybody!</strong> You just read a very important message!';
+// document.body.append(div)
+
+// ol.before('before')
+// ol.after('after')
+
+// let liFirst = document.createElement('li')
+// liFirst.innerHTML = 'prepend'
+// ol.prepend(liFirst)
+
+// let liLast = document.createElement('li')
+// liLast.innerHTML = 'append'
+// ol.append(liLast)
+// ol.before('before')
+// ol.after('after')
+
+// let liFirst = document.createElement('li')
+// liFirst.innerHTML = 'prepend'
+// ol.prepend(liFirst)
+
+// let liLast = document.createElement('li')
+// liLast.innerHTML = 'last'
+// ol.append(liLast)
+
+// div.before('<p>Hello</p>', document.createElement('hr'))
+
+// div.insertAdjacentHTML('beforebegin', '<p>Hey!</p>')
+// div.innerHTML = 'It is me - div! I am in the middle here!'
+// div.insertAdjacentHTML('afterend', '<p>Bye!</p>')
+// document.body.insertAdjacentHTML('afterend', '<div class = "alert"><strong>Hey!</strong> You just saw a very important message</div>')
+
+// let div = document.createElement('div')
+//     div.className = 'alert'
+//     div.innerHTML = 'hey ya!'
+//     document.body.append(div)
+// setTimeout(() => div.remove(), 1000)    
+// setInterval(() => div.hidden =!div.hidden, 1000)
+
+// second.after(first)
+
+// let div2 = div.cloneNode(true);
+// div2.querySelector('strong').innerHTML = 'Bye bye!';
+
+// div.after(div2)
+
+// function getListContent() {
+//   let fragment = new DocumentFragment();
+//   for(let i = 1; i <= 3; i++) {
+//     let li = document.createElement('li')
+//     li.append(i)
+//     fragment.append(li)
+//   }
+//   return fragment;
+// }
+// ul.append( getListContent())
+// function getListContent() {
+//   let result = [];
+
+//   for(let i = 1; i < 10; i++) {
+//     let li = document.createElement('li')
+//     li.append(i)
+//     result.push(li)
+//   }
+//   return result;
+// }
+// ul.append(... getListContent())
+
+// document.write('<p>Hello!</p>')
+
+// setTimeout(() => document.write('<b>this</b>'),500)
+// let el1 = document.getElementById('el1')
+// let el2 = document.getElementById('el2')
+// let el3 = document.getElementById('el3')
+// let text = '<b>текст</b>';
+
+// el1.append(document.createTextNode(text))
+// el2.innerHTML = text
+// el3.textContent = text
+
+// function clear(elem) {
+//   elem = Array(document.getElementById('elem'))
+//   for(let children of elem) {
+//     children.remove()
+  // }
+  // elem = Array(document.gectElementById('elem'))
+  // for(let item of elem.childNodes.length) {
+  //   elem.childNodes[item].remove()
+  //   console.log(item);
+  //   item.remove()
+  // }
+
+// clear()
+
+
+// function clear(elem) {
+//   for (let i=0; i < elem.childNodes.length; i++) {
+//       elem.childNodes[i].remove();
+//   }
+// }
+
+// clear()
+
+// function clear(elem) {
+//   while (elem.firstChild){
+//     elem.firstChild.remove()
+//   }
+// }
+// clear(elem)
+// function clear(elem) {
+//   elem.innerHTML = '';
+// }
+// clear(elem)
+// table.remove();
+
+// let ul = document.createElement('ul')
+// document.body.append(ul)
+// // ul.innerHTML= 'bnjkl'
+
+// function addLi() {
+//   while(true) {
+//     let textLi = prompt('insert!')
+
+//     if(!textLi) break;
+
+//     let li = document.createElement('li');
+//     li.textContent = textLi;
+//     ul.append(li)
+//   }
+
+  // if(textLi) {
+  //   let createEl = document.createElement('li')
+  //   createEl.append(textLi)
+  //   mainEl.append(createEl)
+  // }
+
+// }
+// addLi()
+
+// let ul = document.createElement('ul')
+// document.body.append(ul)
+
+// while(true) {
+//   let addText = prompt('insert smth!')
+//   if(!addText) break;
+//   let li = document.createElement('li')
+//   li.textContent = addText
+//   ul.append(li)
+// }
+// let data = {
+//   "Рыбы": {
+//     "форель": {},
+//     "лосось": {}
+//   },
+
+//   "Деревья": {
+//     "Огромные": {
+//       "секвойя": {},
+//       "дуб": {}
+//     },
+//     "Цветковые": {
+//       "яблоня": {},
+//       "магнолия": {}
+//     }
+//   }
+// };
+
+// function createTree(obj) {
+//   for(let item in obj) {
+//       console.log(item);
+//   }
+// } 
+// createTree(data)
+
+// function iterate() {
+//   let ul = document.querySelector('ul')
+//   // console.log(ul);
+//   for(let i = 0; i < ul.childNodes.length; i++) {
+//     console.log(ul.childNodes[i]);
+//   }
+// }
+// iterate()
+
+let lis = document.getElementsByTagName('li')
+for(let li of lis) {
+  let descendantCount = li.getElementsByTagName('li').length
+  if(!descendantCount) continue
+  li.firstChild.data = li.firstChild.data +  '[' + descendantCount + ']'//  console.log(li.firstChild.data);
+}
