@@ -5492,9 +5492,173 @@
 // }
 // iterate()
 
-let lis = document.getElementsByTagName('li')
-for(let li of lis) {
-  let descendantCount = li.getElementsByTagName('li').length
-  if(!descendantCount) continue
-  li.firstChild.data = li.firstChild.data +  '[' + descendantCount + ']'//  console.log(li.firstChild.data);
-}
+// let lis = document.getElementsByTagName('li')
+// for(let li of lis) {
+//   let descendantCount = li.getElementsByTagName('li').length
+//   if(!descendantCount) continue
+//   li.firstChild.data = li.firstChild.data +  '[' + descendantCount + ']'//  console.log(li.firstChild.data);
+// }
+// setInterval(() => c.hidden = !c.hidden, 1)
+// function girl() {
+//   let j = prompt('What is your name?')
+//   if(j === 'Julia') {
+//     alert('Your name is Julia and you are 14 and you live in Transnistria')
+//   } else {
+//     alert('I need JULIA!!!')
+//   }
+// }
+// girl()
+// let c = document.getElementById('c')
+// setTimeout(() => console.log('COSTYA'), 1000)
+// setTimeout(() => console.log('JULIA'), 2000)
+// setTimeout(() => console.log('MAMA'), 3000)
+// setTimeout(() => console.log('PAPA'), 4000)
+
+// function createCalendar(elem, year, month) {
+
+//   let mon = month - 1; // месяцы в JS идут от 0 до 11, а не от 1 до 12
+//   let d = new Date(year, mon);
+
+//   let table = '<table><tr><th>пн</th><th>вт</th><th>ср</th><th>чт</th><th>пт</th><th>сб</th><th>вс</th></tr><tr>';
+
+//   // пробелы для первого ряда
+//   // с понедельника до первого дня месяца
+//   // * * * 1  2  3  4
+//   for (let i = 0; i < getDay(d); i++) {
+//     table += '<td></td>';
+//   }
+
+//   // <td> ячейки календаря с датами
+//   while (d.getMonth() == mon) {
+//     table += '<td>' + d.getDate() + '</td>';
+
+//     if (getDay(d) % 7 == 6) { // вс, последний день - перевод строки
+//       table += '</tr><tr>';
+//     }
+
+//     d.setDate(d.getDate() + 1);
+//   }
+
+//   // добить таблицу пустыми ячейками, если нужно
+//   // 29 30 31 * * * *
+//   if (getDay(d) != 0) {
+//     for (let i = getDay(d); i < 7; i++) {
+//       table += '<td></td>';
+//     }
+//   }
+
+//   // закрыть таблицу
+//   table += '</tr></table>';
+
+//   elem.innerHTML = table;
+// }
+
+// function getDay(date) { // получить номер дня недели, от 0 (пн) до 6 (вс)
+//   let day = date.getDay();
+//   if (day == 0) day = 7; // сделать воскресенье (0) последним днем
+//   return day - 1;
+// }
+
+// createCalendar(calendar, 2022, 2);
+// clockStart()
+// clockStop()
+
+// let timer;
+
+// function update() {
+//   let clock = document.getElementById('clock')
+//   let date = new Date()
+  
+//   let hours = date.getHours()
+//   if(hours < 10) hours = '0' + hours;
+//   clock.children[0].innerHTML = hours;
+
+//   let minutes = date.getMinutes()
+//   if(minutes < 10) minutes = '0' + minutes;
+//   clock.children[1].innerHTML = minutes;
+
+//   let seconds = date.getSeconds();
+//   if(seconds < 10) seconds = '0' + seconds;
+//   clock.children[2].innerHTML = seconds;
+// }
+
+// function clockStart() {
+//   if(!timer) {
+//     timer = setInterval(update, 1000);
+//   }
+//   update();
+// }
+
+// function clockStop() {
+//   clearInterval(timer);
+//   timer = null;
+// }
+// let a = document.getElementById('one')
+// let li = document.createElement('li')
+// li.textContent = '2'
+// a.append(li)
+
+// let b = document.getElementById('two')
+// let li2 = document.createElement('li')
+// li2.textContent = '3'
+// b.before(li2)
+
+// one.insertAdjacentHTML('afterend', '<li>2</li><li>3</li>')
+
+// console.log(document.body.classList.add('article')); 
+// console.log(document.body.className);
+// for(let name of document.body.classList) {
+//   console.log(name);
+// }
+// function chooseBgColor() {
+
+//   document.body.style.backgroundColor = prompt('what bgc do u prefer?')
+// }
+// setInterval(chooseBgColor, 3500)
+// document.body.style.display = 'none'
+// setTimeout(() => document.body.style.display = '', 1000)
+
+// let computedStyle = getComputedStyle(document.body)
+// console.log(computedStyle.backgroundColor);
+
+// function showNotification() {
+//   let div = document.createElement('div')
+//   div.className = 'notification';
+//   document.body.div.style.marginTop = '10px'
+//   document.body.div.style.marginRight = '10px'
+//   div.innerHTML = 'Hello!'
+// }
+// showNotification()
+
+// let div = document.createElement('div')
+//   div.className = 'notification';
+//   document.div.style.marginTop = '10px'
+//   document.div.style.marginRight = '10px'
+//   document.div.style.backgroundColor = 'red'
+//   document.div.style.position = 'static'
+//   div.innerHTML = 'Hello!'
+
+// function showNotification({top, right, className, html}) {
+//   let notification = document.createElement('div');
+//   notification.className = 'notification';
+
+//   if(className) notification.classList.add(className);
+
+//   notification.style.top = top + 'px';
+//   notification.style.right = right + 'px';
+//   notification.innerHTML = html;
+
+//   document.body.append(notification);
+//   setTimeout(() => notification.remove(), 1500);
+// }
+// // showNotification()
+
+// let i = 1;
+// setInterval(() => {
+//   showNotification({
+//     top: 10,
+//     right: 10,
+//     html: 'Hello' + i++,
+//     className: 'welcome',
+//   })
+// }, 2000)
