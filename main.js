@@ -5662,3 +5662,137 @@
 //     className: 'welcome',
 //   })
 // }, 2000)
+
+// function countRabbits() {
+//   for(let i = 1; i <= 3; i++) {
+//     alert('rabbits in total: ' + i)
+//   }
+// }
+// click.onclick = function() {
+//   alert('thx!')
+// }
+
+// function sayHi() {
+//   console.log('HELLO!!!');
+// }
+// click.onclick = sayHi
+// при нажатии на body будут ошибки,
+// атрибуты всегда строки, и функция станет строкой
+// document.body.setAttribute('onclick', function() { alert(1) });
+
+// function handler1() {
+//   alert('one more!')
+// }
+// function handler2() {
+//   alert('two more')
+// }
+
+// elem.onclick = () => alert('hey!')
+// elem.addEventListener('click', handler1)
+// elem.addEventListener('click', handler2)
+
+// elem.addEventListener('click', {
+//   handleEvent(event) {
+//     alert(event.type + ' on ' + event.currentTarget)
+//   }
+// })
+
+// function hideText() {
+//   let text = document.getElementById('text')
+//   text.hidden = true
+// }
+
+// btn.addEventListener('click', function() {
+//   // text.hidden = true;
+//   document.getElementById('text').hidden = true;
+// })
+// function hidenBtn() {
+//   hideBtn.hidden = true
+// }
+// let ul = document.getElementById('ul')
+// ul.addEventListener('click', function() {
+//   ul.children.hidden = true;
+// })
+// let lis = document.querySelectorAll('li')
+// lis.addEventListener('click', function() {
+//   lis.hidden = true;
+// })
+// btn.addEventListener('click', function() {
+//   // let lis = document.getElementsByTagName("li")
+//   // lis.hidden = true;
+//   document.getElementById("ul").hidden = true;
+//   document.getElementById("ul").hidden = false;
+// })
+
+// let menuElem = document.getElementById('sweeties');
+//     let titleElem = menuElem.querySelector('.title');
+
+//     titleElem.onclick = function() {
+//       menuElem.classList.toggle('open');
+//     };
+
+// let notMainDiv = document.getElementsByClassName('.not_main_div')
+// notMainDiv.addEventListener('click', function() {
+//   notMainDiv.classList.toggle('close')
+// })
+
+// let panes = document.querySelectorAll('.pane')
+
+// for(let pane of panes) {
+//   pane.insertAdjacentHTML('afterbegin', '<button class="remove-btn">[x]</button>')
+//   pane.firstChild.onclick = () => pane.remove();
+// }
+
+// for(let el of document.querySelectorAll('*')) {
+//   el.addEventListener('click', (e) => console.log(`Погружение: ${el.tagName}`), true )
+//   el.addEventListener('click', (e) => console.log(`Всплытие: ${el.tagName}`))
+// }
+
+// document.addEventListener('click', e => {
+//   if(e.target.dataset.count != undefined) e.target.value++;
+// })
+// document.addEventListener('click', event => {
+//   if(event.target.dataset.counter != undefined) event.target.value++;
+// })
+
+// document.addEventListener('click', event => {
+//   let id = event.target.dataset.toggleId;
+
+//   if(!id) {return;}
+//     let elem = document.getElementById('subscribe-mail');
+    
+//     elem.hidden = !elem.hidden;
+
+// })
+// document.addEventListener('click', (event) => {
+//   let btn = document.getElementById('btn');
+//   let clickOnBtn = btn.target.id;
+//   // let clickOnBtn = event.target.id // 
+  
+//   if(!clickOnBtn) return;
+//   let item = document.getElementById('enter');
+//   item.hidden = !item.hidden;
+// })
+document.addEventListener('click', event => {
+  let id = event.target.dataset.toggleId;
+  if(!id) return;
+  let elem = document.getElementById(id);
+  if(!elem) return;
+  elem.hidden = !elem.hidden;
+})
+
+let menuActs = {
+  open() { alert('open...'); },
+  save() { alert('save...'); },
+  draw() { alert('draw...'); },
+  edit() { alert('edit...'); },
+  customize() { alert('customize...'); },
+}
+
+main_menu.addEventListener('click', event => {
+  let li = event.target.closest('li');
+  if(li == null) return;
+
+  let act = li.dataset.command;
+  if(act && menuActs[act] !== undefined) menuActs[act]()
+})

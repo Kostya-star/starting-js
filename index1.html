@@ -7,19 +7,17 @@
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
-<body class="main page">
-  <!-- <div id="clock">
-    <span class="hour">hh</span>:<span class="min">mm</span>:<span class="sec">ss</span>
-  </div>
+<body>
 
-   <input type="button" onclick="clockStart()" value="Start">
-   <input type="button" onclick="clockStop()" value="Stop">
-    -->
-
-    <ul id="ul" class="ul">
-      <li id="one">1</li>
-      <li id="two">4</li>
-    </ul>
+  <h1>Делегирование событий</h1>
+  <input type="button" data-toggle-id="main_menu" value="показать или скрыть меню">
+  <ul id="main_menu">
+    <li data-command="open">открыть</li>
+    <li data-command="save">сохранить</li>
+    <li data-command="draw">рисовать</li>
+    <li data-command="edit">редактирование</li>
+    <li data-command="customize">настройки</li>
+  </ul>
 
 <script src="main.js"></script>
 </body>
