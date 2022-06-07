@@ -5773,26 +5773,222 @@
 //   let item = document.getElementById('enter');
 //   item.hidden = !item.hidden;
 // })
-document.addEventListener('click', event => {
-  let id = event.target.dataset.toggleId;
-  if(!id) return;
-  let elem = document.getElementById(id);
-  if(!elem) return;
-  elem.hidden = !elem.hidden;
-})
+// document.addEventListener('click', event => {
+//   let id = event.target.dataset.toggleId;
+//   if(!id) return;
+//   let elem = document.getElementById(id);
+//   if(!elem) return;
+//   elem.hidden = !elem.hidden;
+// })
 
-let menuActs = {
-  open() { alert('open...'); },
-  save() { alert('save...'); },
-  draw() { alert('draw...'); },
-  edit() { alert('edit...'); },
-  customize() { alert('customize...'); },
-}
+// let menuActs = {
+//   open() { alert('open...'); },
+//   save() { alert('save...'); },
+//   draw() { alert('draw...'); },
+//   edit() { alert('edit...'); },
+//   customize() { alert('customize...'); },
+// }
 
-main_menu.addEventListener('click', event => {
-  let li = event.target.closest('li');
-  if(li == null) return;
+// main_menu.addEventListener('click', event => {
+//   let li = event.target.closest('li');
+//   if(li == null) return;
 
-  let act = li.dataset.command;
-  if(act && menuActs[act] !== undefined) menuActs[act]()
+//   let act = li.dataset.command;
+//   if(act && menuActs[act] !== undefined) menuActs[act]()
+// })
+// let pane = document.getElementsByClassName('.pane');
+// // console.log(main);
+// document.insertAdjacentHTML('afterend', '<button data-close="close">[x]</button>');
+// pane.style.backgroundColor = 'red';
+
+// var d1 = document.getElementById('pane');
+// d1.insertAdjacentHTML('afterend', '<button data-close="close">[x]</button>');
+
+// document.addEventListener('click', event => {
+//   let btn = document.querySelectorAll('.remove-button')
+//   let closeBtn = event.target.btn
+//   if(!closeBtn) return;
+//   let pane = document.querySelectorAll('.pane')
+//   pane.hidden
+// // })
+// container.addEventListener('click', event => {
+//   // if (event.target.className != 'remove-button') return;
+
+//   // let pane = event.target.closest('.pane');
+//   // pane.remove()
+
+//   // if (event.target.className = 'remove-button')
+//   //   event.target.closest('.pane').remove()
+//   // else return
+// })
+
+// for(let li of tree.querySelectorAll('li')) {
+//   let span = document.createElement('span');
+//   li.prepend(span); 
+//   span.append(span.nextSibling)
+// }
+
+// tree.addEventListener('click', e => {
+//   if (e.target.tagName != 'SPAN') return;
+  
+//   let childrenContainer = e.target.parentNode.querySelector('ul');
+//   if (!childrenContainer) return;
+//   childrenContainer.hidden = !childrenContainer.hidden
+// })
+
+// menu.addEventListener('click', e => {
+//   if (e.target.tagName != 'A') {
+//     return;
+//   } else {
+//     let href = e.target.getAttribute('href');
+//     alert(href);
+//   }
+//   return false;
+
+// });
+
+// menu.onclick = function(event) {
+//   if (event.target.nodeName != 'A') {
+//     return;
+//   } else {
+//     let href = event.target.getAttribute('href');
+//     alert( href ); // может быть подгрузка с сервера, генерация интерфейса и т.п.
+//   }
+//   return false; // отменить действие браузера (переход по ссылке)
+
+// };
+
+// item.oncontextmenu = function(event) {
+//   event.preventDefault();
+//   alert("Контекстное меню кнопки");
+// };
+
+// document.oncontextmenu = function(event) {
+//   event.preventDefault();
+//   alert("Контекстное меню документа");
+// };
+
+// contents.addEventListener('click', event => {
+//   function handleLink(href) {
+//     let isLeaving = confirm(`wanna leave for ${href}?`)
+//     if (!isLeaving) event.preventDefault();
+//   }
+//   let target = event.target.closest('a');
+//     if(target && contents.contains(target)) {
+//       return handleLink(target.getAttribute('href'))
+//     }
+// })
+  
+// let e = new Event('click')
+// elem.dispatchEvent(e)
+    
+// document.addEventListener("hello", function(event) { // (1)
+//   alert("Привет от " + event.target.tagName); // Привет от H1
+// });
+
+// // ...запуск события на элементе!
+// let event = new Event("hello", {bubbles: true}); // (2)
+// elem.dispatchEvent(event)
+ 
+// button.addEventListener('click', event => {
+//   if (event.altKey && event.shiftKey) console.log('hooray');
+// })
+
+// contents.addEventListener('click', event => {
+//   let li = event.target.contents.children[1];
+//   if(li) console.log('got it');
+// })
+
+// ul.onmousedown = () => {return false;}
+
+// function singleSelect(li) {
+//   let selected = ul.querySelectorAll('.selected')
+//   for(let item of selected) item.classList.remove('selected');
+//   li.classList.add('selected')
+// }
+
+// function toggleSelect(li) {
+//   li.classList.toggle('selected');
+// }
+
+// function deleteSelect() {
+//   let selected = ul.querySelectorAll('.selected')
+//   for(let item of selected) item.classList.remove('selected');
+// }
+
+// ul.addEventListener('click', event => {
+//   if (event.target.tagName != 'LI') return;
+//   else if(event.ctrlKey || event.metaKey) toggleSelect(event.target);
+//   else if(event.target.classList.contains('selected')) deleteSelect()
+//   else singleSelect(event.target);
+// })
+
+// ul.addEventListener('click', event => {
+//   if (event.target.tagName !== 'LI') return;
+  
+//   if (event.ctrlKey || event.metaKey)
+//   return event.target.classList.toggle('selected');
+  
+//   for (let li of ul.children) {
+//   if (li.classList.contains('selected'))
+//   li.classList.remove('selected');
+//   }
+  
+//   event.target.classList.add('selected');
+//   })
+
+// ul.onclick = function(event) {
+//   if (event.target.tagName !== "LI") return;
+  
+//   if (event.ctrlKey || event.metaKey) {
+//   event.target.classList.toggle('selected');
+//   } else {
+//   for (let li of ul.querySelectorAll('.selected')) {
+//   li.classList.remove('selected');
+//   }
+//   event.target.classList.add('selected');
+//   }
+//   };
+
+// ul.addEventListener('click', event => {
+//   if (event.target.tagName != 'LI') return;
+
+//   if (event.ctrlKey) event.target.classList.toggle('selected')
+//   else if(event.target.classList.contains('selected')) event.target.classList.remove('selected')
+//   else {
+//     for(let li of ul.querySelectorAll('.selected')) {
+//       li.classList.remove('selected')
+//     }
+//     event.target.classList.add('selected')
+//   }
+
+// })
+// ul.addEventListener('mousedown', e => {
+//   e.preventDefault();
+// })
+// let w = 100;
+
+// document.querySelector('.one').onmousemove = event => {
+//   document.querySelector('.one').style.width = w + 'px';
+//   w++
+// }
+// document.querySelector('.one').onmouseenter = () => {
+//   document.querySelector('.one').style.background = 'green'
+// }
+// document.querySelector('.one').onmouseleave = () => {
+//   document.querySelector('.one').style.background = 'red'
+// }
+// document.querySelector('.one').onmousedown = () => {
+//   document.querySelector('.one').style.background = 'orange'
+// }
+// document.querySelector('.one').onmouseup = () => {
+//   document.querySelector('.one').style.background = 'tomato'
+// }
+
+// document.querySelector('.one').onmouseenter = () => {
+//   document.querySelector('.one').style.background = 'green'
+// }
+
+btn.addEventListener('click', event => {
+  document.querySelector('progress').value++
 })
