@@ -5989,6 +5989,200 @@
 //   document.querySelector('.one').style.background = 'green'
 // }
 
-btn.addEventListener('click', event => {
-  document.querySelector('progress').value++
-})
+// btn.addEventListener('click', event => {
+//   document.querySelector('progress').value++
+// })
+
+// let zone1 = document.querySelector('.zone-1')
+// let zone2 = document.querySelector('.zone-2')
+// let p = document.querySelector('#p')
+
+// zone1.ondragover = allowDrop;
+// zone2.ondragover = allowDrop;
+
+// function allowDrop(event) {
+//   event.preventDefault()
+// }
+
+// p.ondragstart = drag;
+
+// function drag(event) {
+//   event.dataTransfer.setData('id', event.target.id)
+// }
+// zone1.ondrop = drop;
+// zone2.ondrop = drop;
+
+// function drop(event) {
+//   let itemId = event.dataTransfer.getData('id');
+//   console.log(itemId);
+//   event.target.append(document.getElementById(itemId))
+// }
+
+// let draggables = document.querySelectorAll('.draggable');
+// let containers = document.querySelectorAll('.container');
+
+// draggables.forEach(draggable => {
+//   draggable.addEventListener('dragstart',  () => {
+//     draggable.classList.add('dragging')
+//   })
+//   draggable.addEventListener('dragend', () => {
+//     draggable.classList.remove('dragging')
+//   })
+// })
+
+// containers.forEach(container => {
+//   container.addEventListener('dragover', event => {
+//     event.preventDefault()
+//     let draggable = document.querySelector('.dragging')
+//     container.appendChild(draggable)
+//   })
+// })
+//---------------------------------------------------------------------
+
+// let fill =  document.querySelector('.fill');
+// let empties = document.querySelectorAll('.empty');
+
+// fill.addEventListener('dragstart', dragStart);
+// fill.addEventListener('dragend', dragEnd);
+
+// for(let empty of empties) {
+//   empty.addEventListener('dragover', dragOver);
+//   empty.addEventListener('dragenter', dragEnter);
+//   empty.addEventListener('dragleave', dragLeave);
+//   empty.addEventListener('drop', dragDrop);
+// }
+
+// //drag functions
+
+// function dragStart() {
+//   this.classList.add('hold')
+//   setTimeout(() => this.classList.add('invisible'), 0)
+// }
+// function dragEnd() {
+//   this.classList = 'fill';
+// }
+
+// function dragOver(event) {
+//   event.preventDefault()
+//   console.log('over');
+
+// }
+
+// function dragEnter(event) {
+//   event.preventDefault();
+//   this.classList.add('hovered')
+// }
+
+// function dragLeave() {
+//   console.log('leave');
+//   this.classList = 'empty';
+// }
+
+// function dragDrop() {
+//   this.classList = 'empty';
+//   this.append(fill);
+// }
+
+//-----------------------------------
+
+// let fill = document.querySelector('.fill');
+// let empties = document.querySelectorAll('.empty');
+
+// fill.addEventListener('dragstart', () => {
+//   fill.classList.add('hold');
+//   setTimeout(() => {fill.classList.add('invisible')}, 0)
+// });
+// fill.addEventListener('dragend', () => {
+//   fill.classList = 'fill';
+// })
+
+// for(let empty of empties) {
+//   empty.addEventListener('dragover', (event) =>{
+//     event.preventDefault()
+//     empty.classList.add('hovered')
+//   })
+
+//   empty.addEventListener('dragenter', () =>{
+//     empty.classList.add('hovered')
+//   })
+
+//   empty.addEventListener('dragleave', () =>{
+//     empty.classList = 'empty'
+//   })
+
+//   empty.addEventListener('drop', () =>{
+//     empty.classList = 'empty'
+//     empty.append(fill)
+//   })
+// }
+
+// document.addEventListener('keydown', event => {
+//   if (event.code === 'KeyZ' && (event.ctrlKey || event.metaKey)) alert('cancel!')
+// })
+// let a = 75;
+// btn.addEventListener('click', event => {
+//   document.querySelector('#pr').value++;
+  
+// })
+
+// function checkPhoneKey(key) {
+//   document.querySelector('input').addEventListener('contextmenu', event => event.preventDefault()
+//   )
+//   return setTimeout( (key >= '0' && key <='9') || key == '+' || key == '(' || key == ')' || key == '-' || key == '*' || key == '/' || key == 'Backspace', 0) 
+// }
+
+// function runOnKeys(func, ...codes) {
+//   let pressed = new Set();
+  
+//   document.addEventListener('keydown', event => {
+//     pressed.add(event.code);
+
+//     for (let code of codes) if (!pressed.has(code)) return
+
+//     pressed.clear();
+
+//     func();
+//   })
+//   document.addEventListener('keyup', event => {
+//     pressed.delete(event.code);
+//   });
+// }
+
+// runOnKeys(
+//   () => console.log('you just pressed two keys'),
+//   'KeyQ',
+//   'KeyW',
+//   'Backspace'
+// )
+
+// function runOnKeys(func, ...codes) {
+//     let set = new Set();  
+    
+//     document.addEventListener('keydown', event => {
+//       set.add(event.code)
+//       // console.log(`u jusr presseld ${event.code}`);
+//     for(let code of codes) {
+//       if (!set.has(code)) return;
+//     }
+
+//     set.clear();
+//     func();
+//   })
+//   document.addEventListener('keyup', event => {
+//     set.delete(event.code)
+//   })
+// }
+
+// runOnKeys(
+//   () => console.log('you pressed two keys '),
+//   'KeyK',
+//   'KeyL'
+// )
+
+// document.addEventListener('keyup', event => {
+//   console.log('u just pressed ' + event.key);
+//   let keysLength = event.key.length;
+//   if (keysLength > 1) {
+//     console.log('you pressed ' + event.key + keysLength + ' times');
+//   }
+// })
