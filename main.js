@@ -6186,3 +6186,159 @@
 //     console.log('you pressed ' + event.key + keysLength + ' times');
 //   }
 // })
+
+// window.addEventListener('scroll', () => {
+//   document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
+// });
+
+// for (let i = 0; i < 2000; i++) document.writeln(i)
+
+// arrowTop.addEventListener('click', () => {
+//   window.scrollTo(pageXOffset, 0)
+// })
+
+// window.addEventListener('scroll', () => {
+//   arrowTop.hidden = (pageYOffset < document.documentElement.clientHeight)
+// })
+
+// for(let i = 0; i < 3000; i++) document.writeln(i)
+
+// window.onload = () => {
+//   let scrolled;
+//   let timer;
+
+//   document.querySelector('#top').onclick = () => {
+//     scrolled = window.pageYOffset;
+//     scrollToTop();
+//   }
+//   function scrollToTop() {
+//     if (scrolled > 0) {
+//       window.scrollTo(0, scrolled);
+//       scrolled = scrolled - 100;
+//       timer = setTimeout(scrollToTop, 0);
+//     }
+//     else {
+//       clearTimeout(timer);
+//       window.scrollTo(0, 0)
+//     }
+//   }
+// }
+
+// let form = document.forms.my
+// let elem = form.elements.one
+// console.log(elem.value);
+
+// let form = document.forms[0];
+// let ageElems = form.elements.age;
+// console.log(ageElems[1]);
+
+// console.log(form.elements.login);
+// let fieldset = form.elements.userFields
+// console.log(fieldset);
+
+// console.log(fieldset.elements.login === form.elements.login);
+
+// console.log(select.selectedIndex = 0);
+
+// let selected = Array.from(select.options)
+//     .filter(option => option.selected)
+//     .map(option => option.value);
+
+//   console.log(selected);  
+
+// let selected = genres.options[1].value + ' ' + genres.options[1].text
+// console.log(selected);
+
+// let option = new Option('Классика', 'classic', true, true)
+// genres.append(option)
+// console.log(genres);
+
+// input.onblur = () =>  {
+//   if (!input.value.includes('@')) {
+//     input.classList.add('invalid');
+//     error.innerHTML = 'plz, enter correct email';
+//   }
+// };
+// // input.onfocus = () => {
+// //   if (this.classList.contains('invalid')) {
+// //     this.classList.remove('invalid');
+// //     error.innerHTML = '';
+// //   }
+// // }
+// input.onfocus = function() {
+//   if (this.classList.contains('invalid')) {
+//     this.classList.remove('invalid');
+//     error.innerHTML = "";
+//   }
+// };
+
+// input.onblur = function() {
+//   if (!this.value.includes('@')) {
+//     this.classList.add('error');
+//     input.focus();
+//   } else {
+//     this.classList.remove('error')
+//   }
+// }
+
+// div.addEventListener('click', focusOnDiv)
+
+// function focusOnDiv() {
+//   textarea.hidden = false
+//   textarea.focus()
+//   textarea.text = div.text
+// }
+//-------------------------------------
+// let area = null;
+// view.addEventListener('click', editStart)
+
+// function editStart() {
+//   area = document.createElement('textarea')
+//   area.classList.add('edit');
+//   // area.className = 'edit'
+//   area.value = view.innerHTML;
+
+//   area.addEventListener('keydown', event => {
+//     if (event.key === 'Enter') this.blur()
+//   })
+
+//   area.addEventListener('blur', () => editEnd)
+
+//   view.replaceWith(area);
+//   area.focus();
+// }
+// function editEnd() {
+//   view.innerHTML = area.value;
+//   area.replaceWith(view);
+// }
+document.addEventListener('click', ev => {
+  let t = ev.target
+  if (t.classList.contains('view')) edit(t)
+})
+
+function edit(elem){
+
+  let textarea = document.createElement('textarea')
+
+  textarea.classList.add('edit')
+
+  textarea.value = elem.innerHTML
+
+  textarea.addEventListener('keydown', ev => {
+    if (ev.key == 'Enter'){
+      textarea.blur()
+    }
+  })
+
+  textarea.addEventListener('blur', () => {
+    endEdit(elem, textarea)
+  })
+
+  elem.replaceWith(textarea)
+  textarea.focus()
+}
+
+function endEdit(elem, textarea){
+  elem.innerHTML = textarea.value
+  textarea.replaceWith(elem)
+}
