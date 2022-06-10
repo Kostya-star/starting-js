@@ -6311,34 +6311,217 @@
 //   view.innerHTML = area.value;
 //   area.replaceWith(view);
 // }
-document.addEventListener('click', ev => {
-  let t = ev.target
-  if (t.classList.contains('view')) edit(t)
-})
+// document.addEventListener('click', ev => {
+//   let t = ev.target
+//   if (t.classList.contains('view')) edit(t)
+// })
 
-function edit(elem){
+// function edit(elem){
 
-  let textarea = document.createElement('textarea')
+//   let textarea = document.createElement('textarea')
 
-  textarea.classList.add('edit')
+//   textarea.classList.add('edit')
 
-  textarea.value = elem.innerHTML
+//   textarea.value = elem.innerHTML
 
-  textarea.addEventListener('keydown', ev => {
-    if (ev.key == 'Enter'){
-      textarea.blur()
+//   textarea.addEventListener('keydown', ev => {
+//     if (ev.key == 'Enter'){
+//       textarea.blur()
+//     }
+//   })
+
+//   textarea.addEventListener('blur', () => {
+//     endEdit(elem, textarea)
+//   })
+
+//   elem.replaceWith(textarea)
+//   textarea.focus()
+// }
+
+// function endEdit(elem, textarea){
+//   elem.innerHTML = textarea.value
+//   textarea.replaceWith(elem)
+// }
+
+// 'use strict'
+
+// let table = document.getElementById('bagua-table');
+
+// table.addEventListener('click', select)
+
+// function select (event) {
+//     let td = event.target.closest('td')
+//     if (!td) return
+//     if ( !this.contains(td) ) return
+
+//     table.removeEventListener('click', select)
+
+//     let textarea = document.createElement('textarea')
+//     let coords = td.getBoundingClientRect()
+
+//     textarea.value = td.innerHTML
+//     textarea.classList = 'edit'
+//     textarea.style.width = coords.right - coords.left + 'px'
+//     textarea.style.height = coords.bottom - coords.top + 'px'
+
+//     td.replaceWith(textarea)
+//     textarea.focus()
+
+//     let wrapper = document.createElement('div')
+//     let ok = document.createElement('button')
+//     let cancel = document.createElement('button')
+
+//     ok.innerHTML = 'OK'
+//     cancel.innerHTML = 'CANCEL'
+
+//     cancel.style.marginLeft = '5px'
+
+//     wrapper.style.position = 'absolute'
+//     wrapper.style.left = coords.left + 'px'
+//     wrapper.style.top = coords.bottom + 'px'
+
+//     document.body.append(wrapper)
+//     wrapper.append(ok)
+//     wrapper.append(cancel)
+
+//     wrapper.addEventListener('click', confirmClick)
+
+//     function confirmClick(event) {
+//         if (event.target !== cancel && event.target !== ok) return
+
+//         if (event.target === ok) {
+//             td.innerHTML = textarea.value
+//         }
+
+//         wrapper.remove()
+//         textarea.replaceWith(td)
+//         table.addEventListener('click', select)
+//     }
+// }
+
+// input.oninput = () => {
+//   result.innerHTML = input.value;
+// }
+
+// input.oncut = input.oncopy = input.onpaste = (event) => {
+//   console.log(event.type + ' - ');
+//   return false;
+// };
+
+// let form = document.forms.calculator;
+
+// form.money.oninput = calc;
+// form.months.onchange = calc;
+// form.interest.oninput = calc;
+
+// function calc() {
+//   let initial = +form.money.value;
+//   if (!initial) return;
+
+//   let interest = form.interest.value * 0.01;
+//   if (!interest) return;
+
+//   let years = form.months.value / 12;
+//   if (!years) return;
+
+//   let result = Math.round(initial * (1 + interest) ** years);
+
+//   let height = result / form.money.value * 100 + 'px';
+//   document.getElementById('height-after').style.height = height;
+//   document.getElementById('money-before').innerHTML = form.money.value;
+//   document.getElementById('money-after').innerHTML = result;
+// }
+
+// calc()
+
+// let form = document.createElement('form');
+// form.action = 'https://google.com/search';
+// form.method = 'GET';
+
+// form.innerHTML = '<input name="q" value="test">'
+// document.body.append(form)
+// console.log(document);
+// form.submit()
+
+// showPrompt(html, callback) {
+//   let form = document.createElement('form')
+//   form.innerHTML = '<input value="insert smth in here">'
+//   let btnOk = document.createElement('button')
+//   btnOk.value = 'OK'
+//   btnOk.type = 'submit'
+//   form.append(form)
+//   form.append(btnOk)
+// }
+// let form = document.createElement('form');
+// form.innerHTML = '<input value="insert smth in here">';
+// let btnOk = document.createElement('button');
+// btnOk.value = 'OK';
+// btnOk.type = 'submit';
+// btnOk.text = 'Submit';
+// document.body.append(form);
+// document.body.append(btnOk);
+// form.append(btnOk);
+
+
+function showCover() {
+  let coverDiv = document.createElement('div');
+  coverDiv.id = 'cover-div';
+
+  document.body.style.overflowY = 'hidden';
+  document.body.append(coverDiv)
+}
+function hideCover() {
+  document.getElementById('cover-div').remove();  
+  document.body.style.overflowY = '';
+}
+
+function showPrompt(text, callback) {
+  showCover();
+  let form = document.getElementById('prompt-form');
+  let container = document.getElementById('prompt-form-container');
+  document.getElementById('prompt-message').innerHTML = text;
+  form.text.value = '';
+
+  function complete(value) {
+    hideCover();
+    container.style.display = 'none';
+    document.onkeydown = null;
+    callback(value);
+  }
+  form.onsubmit = function() {
+    let value = form.text.value;
+    if (value == '') return false;
+
+    complete(value);
+    return false;
+  }
+  form.cancel.onclick = function() {
+    complete(null)
+  };
+  document.onkeydown = function(event) {
+    if (event.key === 'Escape') complete(null);
+  }
+  let lastElem = form.elements[form.elements.length - 1];
+  let firstElem = form.elements[0];
+
+  lastElem.onkeydown = function(e)  {
+    if (e.key == 'Tab' && !e.shiftKey) {
+      firstElem.focus();
+      return false;
     }
-  })
-
-  textarea.addEventListener('blur', () => {
-    endEdit(elem, textarea)
-  })
-
-  elem.replaceWith(textarea)
-  textarea.focus()
+  }
+  firstElem.onkeydown = function(e) {
+    if (e.key == 'Tab' && !e.shiftKey) {
+      lastElem.focus() 
+      return false;
+    } 
+  }
+  container.style.display = 'block';
+  form.elements.text.focus();
 }
 
-function endEdit(elem, textarea){
-  elem.innerHTML = textarea.value
-  textarea.replaceWith(elem)
-}
+document.getElementById('show-button').addEventListener('click', function() {
+  showPrompt("Введите что-нибудь<br>...умное :)", function(value) {
+    alert("Вы ввели: " + value);
+  })
+}) 
