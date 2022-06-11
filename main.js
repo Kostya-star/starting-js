@@ -6463,65 +6463,99 @@
 // form.append(btnOk);
 
 
-function showCover() {
-  let coverDiv = document.createElement('div');
-  coverDiv.id = 'cover-div';
+// function showCover() {
+//   let coverDiv = document.createElement('div');
+//   coverDiv.id = 'cover-div';
 
-  document.body.style.overflowY = 'hidden';
-  document.body.append(coverDiv)
+//   document.body.style.overflowY = 'hidden';
+//   document.body.append(coverDiv)
+// }
+// function hideCover() {
+//   document.getElementById('cover-div').remove();  
+//   document.body.style.overflowY = '';
+// }
+
+// function showPrompt(text, callback) {
+//   showCover();
+//   let form = document.getElementById('prompt-form');
+//   let container = document.getElementById('prompt-form-container');
+//   document.getElementById('prompt-message').innerHTML = text;
+//   form.text.value = '';
+
+//   function complete(value) {
+//     hideCover();
+//     container.style.display = 'none';
+//     document.onkeydown = null;
+//     callback(value);
+//   }
+//   form.onsubmit = function() {
+//     let value = form.text.value;
+//     if (value == '') return false;
+
+//     complete(value);
+//     return false;
+//   }
+//   form.cancel.onclick = function() {
+//     complete(null)
+//   };
+//   document.onkeydown = function(event) {
+//     if (event.key === 'Escape') complete(null);
+//   }
+//   let lastElem = form.elements[form.elements.length - 1];
+//   let firstElem = form.elements[0];
+
+//   lastElem.onkeydown = function(e)  {
+//     if (e.key == 'Tab' && !e.shiftKey) {
+//       firstElem.focus();
+//       return false;
+//     }
+//   }
+//   firstElem.onkeydown = function(e) {
+//     if (e.key == 'Tab' && !e.shiftKey) {
+//       lastElem.focus() 
+//       return false;
+//     } 
+//   }
+//   container.style.display = 'block';
+//   form.elements.text.focus();
+// }
+
+// document.getElementById('show-button').addEventListener('click', function() {
+//   showPrompt("Введите что-нибудь<br>...умное :)", function(value) {
+//     alert("Вы ввели: " + value);
+//   })
+// }) 
+
+// document.addEventListener('DOMContentLoaded', ready);
+// function ready() {
+//   alert('DOM is ready');
+//   alert(`the img size is ${img.offsetWidth} and ${img.offsetHeight}`)
+// }
+// window.addEventListener('load', ready);
+// function ready() {
+//   alert('DOM is ready');
+//   alert(`the img size is ${img.offsetWidth} and ${img.offsetHeight}`)
+// }
+
+// let data = {}
+// window.addEventListener('unload', () => {
+//   navigator.sendBeacon('/analytics', JSON.stringify(data))
+// });
+
+// window.onbeforeunload = () => {
+//   return 'there is some unsaved data. Still wanna leave?'
+// } 
+
+// console.log(document.readyState);
+// document.addEventListener('readystatechange', () => console.log(document.readyState))
+
+let img = document.createElement('img');
+img.src = 'https://js.cx/clipart/train.gif';
+document.body.append(img)
+
+img.onload = () => {
+  console.log(`the img was loaded, size is ${img.width} ${img.height}`);
 }
-function hideCover() {
-  document.getElementById('cover-div').remove();  
-  document.body.style.overflowY = '';
+img.onerror = () => {
+  console.log(`eror occured while loading`);
 }
-
-function showPrompt(text, callback) {
-  showCover();
-  let form = document.getElementById('prompt-form');
-  let container = document.getElementById('prompt-form-container');
-  document.getElementById('prompt-message').innerHTML = text;
-  form.text.value = '';
-
-  function complete(value) {
-    hideCover();
-    container.style.display = 'none';
-    document.onkeydown = null;
-    callback(value);
-  }
-  form.onsubmit = function() {
-    let value = form.text.value;
-    if (value == '') return false;
-
-    complete(value);
-    return false;
-  }
-  form.cancel.onclick = function() {
-    complete(null)
-  };
-  document.onkeydown = function(event) {
-    if (event.key === 'Escape') complete(null);
-  }
-  let lastElem = form.elements[form.elements.length - 1];
-  let firstElem = form.elements[0];
-
-  lastElem.onkeydown = function(e)  {
-    if (e.key == 'Tab' && !e.shiftKey) {
-      firstElem.focus();
-      return false;
-    }
-  }
-  firstElem.onkeydown = function(e) {
-    if (e.key == 'Tab' && !e.shiftKey) {
-      lastElem.focus() 
-      return false;
-    } 
-  }
-  container.style.display = 'block';
-  form.elements.text.focus();
-}
-
-document.getElementById('show-button').addEventListener('click', function() {
-  showPrompt("Введите что-нибудь<br>...умное :)", function(value) {
-    alert("Вы ввели: " + value);
-  })
-}) 
